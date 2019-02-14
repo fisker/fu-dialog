@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-new-func
 export const globalThis = Function('return this')()
 
 export const toString = Object.prototype.toString
@@ -47,8 +48,7 @@ function forIn(fn) {
 
 export const assign =
   Object.assign ||
-  function assign(target) {
-    const sources = Array.prototype.slice.call(arguments, 1)
+  function assign(target, ...sources) {
     forEach.call(sources, function(source) {
       forIn(source, function(value, key) {
         target[key] = value

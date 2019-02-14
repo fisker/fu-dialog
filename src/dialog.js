@@ -1,10 +1,8 @@
 import defaultSettings from './default-settings'
-import {assign, getType, isArrayLike} from './shared'
+import {assign, getType, isArrayLike, returnFalse, document} from './shared'
 import * as classNames from './classnames'
-import {createElement} from './dom'
+import {createElement, on, appendElement} from './dom'
 import {registerDialog} from './polyfill'
-
-import {on} from './dom'
 
 export function parseDialogOptions(
   options,
@@ -44,8 +42,8 @@ export function createAction(actionText, props, action) {
   const el = createElement('button', props)
 
   return {
-    el: el,
-    action: action,
+    el,
+    action,
   }
 }
 

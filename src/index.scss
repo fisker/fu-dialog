@@ -6,6 +6,16 @@ $f-dialog-backdrop-opacity: 0.4 !default;
 $f-dialog-backdrop-border-radius: 2px !default;
 $f-dialog-close-color: #808080 !default;
 
+@mixin dialog-backdrop() {
+  &::backdrop {
+    @content;
+  }
+
+  & + .backdrop {
+    @content;
+  }
+}
+
 .f-dialog {
   border: 0;
   padding: 0;
@@ -15,11 +25,7 @@ $f-dialog-close-color: #808080 !default;
   line-height: 1.4;
 
   @if $f-dialog-backdrop-opacity != 0.1 {
-    &::backdrop {
-      background: rgba(#000, $f-dialog-backdrop-opacity);
-    }
-
-    & + .backdrop {
+    @include dialog-backdrop() {
       background: rgba(#000, $f-dialog-backdrop-opacity);
     }
   }

@@ -26,7 +26,7 @@ import {
 
 import {alert, confirm, prompt} from './shortcuts'
 
-function setDefault(options, value) {
+export function setDefault(options, value) {
   if (arguments.length === 2) {
     options = {
       [options]: value,
@@ -34,6 +34,10 @@ function setDefault(options, value) {
   }
 
   return assign(defaultSettings, options)
+}
+
+export function dialog(options) {
+  return new Dialog(options)
 }
 
 function returnPromise(method) {
@@ -51,21 +55,20 @@ function returnPromise(method) {
   }
 }
 
-function dialog(options) {
-  return new Dialog(options)
-}
+assign(dialog, {
+  dialog,
+  Dialog,
+  alert: returnPromise(alert),
+  confirm: returnPromise(confirm),
+  prompt: returnPromise(prompt),
+  action: assign(createAction, {
+    confirm: createConfirmAction,
+    cancel: createCancelAction,
+  }),
+  btn: {
+    confirm: createConfirmAction(),
+    cancel: createCancelAction(),
+  },
+})
 
-dialog.dialog = dialog
-dialog.Dialog = Dialog
-dialog.alert = alert
-dialog.confirm = returnPromise(confirm)
-dialog.prompt = returnPromise(prompt)
-dialog.action = createAction
-dialog.action.confirm = createConfirmAction
-dialog.action.cancel = createCancelAction
-dialog.btn = {
-  confirm: createConfirmAction(),
-  cancel: createCancelAction(),
-}
-
-module.exports = dialog
+export default dialog

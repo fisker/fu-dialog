@@ -1,4 +1,4 @@
-import {isArray, assign} from './shared'
+import {isArray, assign, document, isArrayLike, forEach, noop} from './shared'
 
 export function createElement(parentNode, tagName, props = {}) {
   if (typeof parentNode === 'string') {

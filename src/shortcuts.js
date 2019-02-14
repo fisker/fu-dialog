@@ -4,12 +4,10 @@ import {
   createConfirmAction,
   createCancelAction,
 } from './dialog'
-
 import {noop} from './shared'
-
 import * as classNames from './classnames'
-
-import {addClass} from './dom'
+import {createElement, addClass, appendElement} from './dom'
+import defaultSettings from './default-settings'
 
 export function alert(options, onAction = noop) {
   options = parseDialogOptions(options)
