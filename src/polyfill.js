@@ -1,5 +1,5 @@
-import es6Promise from 'es6-promise';
-import dialogPolyfill from 'dialog-polyfill';
+import es6Promise from 'es6-promise'
+import dialogPolyfill from 'dialog-polyfill'
 
-export const {registerDialog} = dialogPolyfill;
-export const Promise = es6Promise;
+export const {registerDialog} = dialogPolyfill
+export const Promise = es6Promise

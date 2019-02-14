@@ -4,7 +4,7 @@
 module.exports = {
   // options for all files
   trailingComma: 'es5',
-  semi: true,
+  semi: false,
   singleQuote: true,
   bracketSpacing: false,
   htmlWhitespaceSensitivity: 'ignore',
@@ -92,4 +92,4 @@ module.exports = {
       },
     },
   ],
-};
+}

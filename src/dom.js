@@ -1,57 +1,57 @@
-import {isArray, assign} from './shared';
+import {isArray, assign} from './shared'
 
 export function createElement(parentNode, tagName, props = {}) {
   if (typeof parentNode === 'string') {
-    props = tagName;
-    tagName = parentNode;
-    parentNode = null;
+    props = tagName
+    tagName = parentNode
+    parentNode = null
   }
 
   if (isArray(props) || typeof props === 'string') {
     props = {
       className: props,
-    };
+    }
   }
 
   if (isArray(props.className)) {
-    props.className = props.className.join(' ');
+    props.className = props.className.join(' ')
   }
 
-  const el = document.createElement(tagName);
-  assign(el, props);
+  const el = document.createElement(tagName)
+  assign(el, props)
 
   if (parentNode) {
-    parentNode.appendChild(el);
+    parentNode.appendChild(el)
   }
 
-  return el;
+  return el
 }
 
 export function appendElement(parent, children) {
   if (typeof children === 'string') {
-    parent.innerHTML = children;
-    return;
+    parent.innerHTML = children
+    return
   }
 
   if (isArrayLike(children)) {
     forEach.call(children, function(el) {
-      appendElement(parent, el);
-    });
+      appendElement(parent, el)
+    })
 
-    return;
+    return
   }
 
-  parent.appendChild(children);
+  parent.appendChild(children)
 }
 
 export function addClass(el, className) {
   if (el.classList) {
-    el.classList.add(className);
+    el.classList.add(className)
   } else {
-    el.className += ' ' + className;
+    el.className += ' ' + className
   }
 }
 
 export function on(el, type, action = noop) {
-  el.addEventListener(type, action, false);
+  el.addEventListener(type, action, false)
 }

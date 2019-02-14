@@ -9,63 +9,63 @@ import {
   isArrayLike,
   isArray,
   returnFalse,
-} from './shared';
+} from './shared'
 
-import {createElement, appendElement, addClass, on} from './dom';
+import {createElement, appendElement, addClass, on} from './dom'
 
-import defaultSettings from './default-settings';
+import defaultSettings from './default-settings'
 
-import {registerDialog, Promise} from './polyfill';
+import {registerDialog, Promise} from './polyfill'
 
 import {
   Dialog,
   createAction,
   createConfirmAction,
   createCancelAction,
-} from './dialog';
+} from './dialog'
 
-import {alert, confirm, prompt} from './shortcuts';
+import {alert, confirm, prompt} from './shortcuts'
 
 function setDefault(options, value) {
   if (arguments.length === 2) {
     options = {
       [options]: value,
-    };
+    }
   }
 
-  return assign(defaultSettings, options);
+  return assign(defaultSettings, options)
 }
 
 function returnPromise(method) {
   return function(options, onAction = noop) {
-    let dialog;
+    let dialog
     const promise = new Promise(resolve => {
       dialog = method(options, function(result) {
-        resolve(result);
-        return onAction.call(this, result);
-      });
-    });
-    promise.dialog = dialog;
+        resolve(result)
+        return onAction.call(this, result)
+      })
+    })
+    promise.dialog = dialog
 
-    return promise;
-  };
+    return promise
+  }
 }
 
 function dialog(options) {
-  return new Dialog(options);
+  return new Dialog(options)
 }
 
-dialog.dialog = dialog;
-dialog.Dialog = Dialog;
-dialog.alert = alert;
-dialog.confirm = returnPromise(confirm);
-dialog.prompt = returnPromise(prompt);
-dialog.action = createAction;
-dialog.action.confirm = createConfirmAction;
-dialog.action.cancel = createCancelAction;
+dialog.dialog = dialog
+dialog.Dialog = Dialog
+dialog.alert = alert
+dialog.confirm = returnPromise(confirm)
+dialog.prompt = returnPromise(prompt)
+dialog.action = createAction
+dialog.action.confirm = createConfirmAction
+dialog.action.cancel = createCancelAction
 dialog.btn = {
   confirm: createConfirmAction(),
   cancel: createCancelAction(),
-};
+}
 
-module.exports = dialog;
+module.exports = dialog

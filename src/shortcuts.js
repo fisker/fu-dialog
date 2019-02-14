@@ -3,74 +3,74 @@ import {
   parseDialogOptions,
   createConfirmAction,
   createCancelAction,
-} from './dialog';
+} from './dialog'
 
-import {noop} from './shared';
+import {noop} from './shared'
 
-import * as classNames from './classnames';
+import * as classNames from './classnames'
 
-import {addClass} from './dom';
+import {addClass} from './dom'
 
 export function alert(options, onAction = noop) {
-  options = parseDialogOptions(options);
+  options = parseDialogOptions(options)
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onAction);
+    const confirmBtn = createConfirmAction(onAction)
 
-    options.actions = [confirmBtn];
+    options.actions = [confirmBtn]
   }
 
-  options.onClose = onAction;
+  options.onClose = onAction
 
-  const dialog = new Dialog(options);
+  const dialog = new Dialog(options)
 
-  addClass(dialog.container, classNames.DIALOG_TYPE_ALERT);
+  addClass(dialog.container, classNames.DIALOG_TYPE_ALERT)
 
-  return dialog;
+  return dialog
 }
 
 export function confirm(options, onAction = noop) {
-  options = parseDialogOptions(options);
+  options = parseDialogOptions(options)
 
   function onConfirm() {
-    return onAction.call(this, true);
+    return onAction.call(this, true)
   }
 
   function onCancel() {
-    return onAction.call(this, false);
+    return onAction.call(this, false)
   }
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onConfirm);
-    const cancelBtn = createCancelAction(onCancel);
+    const confirmBtn = createConfirmAction(onConfirm)
+    const cancelBtn = createCancelAction(onCancel)
 
     if (defaultSettings.reverseActions) {
-      options.actions = [cancelBtn, confirmBtn];
+      options.actions = [cancelBtn, confirmBtn]
     } else {
-      options.actions = [confirmBtn, cancelBtn];
+      options.actions = [confirmBtn, cancelBtn]
     }
   }
 
-  options.onClose = onCancel;
+  options.onClose = onCancel
 
-  const dialog = new Dialog(options);
+  const dialog = new Dialog(options)
 
-  addClass(dialog.container, classNames.DIALOG_TYPE_CONFIRM);
+  addClass(dialog.container, classNames.DIALOG_TYPE_CONFIRM)
 
-  return dialog;
+  return dialog
 }
 
 export function prompt(options, onAction = noop) {
   options = parseDialogOptions(options, {
     title: null,
     closeButton: false,
-  });
+  })
 
   if (!options.content && !('message' in options)) {
-    options.content = [];
+    options.content = []
   }
 
-  let {input} = options;
+  let {input} = options
 
   if (!input) {
     if (options.rows) {
@@ -78,43 +78,43 @@ export function prompt(options, onAction = noop) {
         className: classNames.INPUT,
         rows: options.rows,
         placeholder: options.placeholder || defaultSettings.promptPlaceholder,
-      });
+      })
     } else {
       input = createElement('input', {
         type: 'text',
         className: classNames.INPUT,
         placeholder: options.placeholder || defaultSettings.promptPlaceholder,
-      });
+      })
     }
   }
 
   function onConfirm() {
-    return onAction.call(this, input.value);
+    return onAction.call(this, input.value)
   }
 
   function onCancel() {
-    return onAction.call(this);
+    return onAction.call(this)
   }
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onConfirm);
+    const confirmBtn = createConfirmAction(onConfirm)
 
-    const cancelBtn = createCancelAction(onCancel);
+    const cancelBtn = createCancelAction(onCancel)
 
     if (defaultSettings.reverseActions) {
-      options.actions = [cancelBtn, confirmBtn];
+      options.actions = [cancelBtn, confirmBtn]
     } else {
-      options.actions = [confirmBtn, cancelBtn];
+      options.actions = [confirmBtn, cancelBtn]
     }
   }
 
-  options.onClose = onCancel;
+  options.onClose = onCancel
 
-  const dialog = new Dialog(options, false);
+  const dialog = new Dialog(options, false)
 
-  addClass(dialog.container, classNames.DIALOG_TYPE_PROMPT);
-  appendElement(dialog.body, input);
-  dialog.open();
+  addClass(dialog.container, classNames.DIALOG_TYPE_PROMPT)
+  appendElement(dialog.body, input)
+  dialog.open()
 
-  return dialog;
+  return dialog
 }

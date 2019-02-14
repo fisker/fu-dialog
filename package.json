@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "parcel demo/index.html --open",
     "build": "cd scripts && bash ./build.sh",
-    "build2": "cd scripts && bash ./build2.sh"
+    "build2": "cd scripts && bash ./build2.sh",
+    "release": "np --no-yarn --no-cleanup"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

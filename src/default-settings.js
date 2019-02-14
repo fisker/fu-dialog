@@ -5,4 +5,4 @@ export default {
   promptPlaceholder: '请输入',
   reverseActions: false,
   closeButton: true,
-};
+}
