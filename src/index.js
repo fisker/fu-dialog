@@ -1,21 +1,8 @@
-import {
-  globalThis,
-  forEach,
-  toString,
-  assign,
-  document,
-  noop,
-  getType,
-  isArrayLike,
-  isArray,
-  returnFalse,
-} from './shared'
-
-import {createElement, appendElement, addClass, on} from './dom'
+import {assign, noop} from './shared'
 
 import defaultSettings from './default-settings'
 
-import {registerDialog, Promise} from './polyfill'
+import {Promise} from './polyfill'
 
 import {
   Dialog,

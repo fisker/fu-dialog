@@ -3,4 +3,7 @@
 module.exports = {
   root: true,
   extends: ['@xwtec'],
-};
+  rules: {
+    'prettier/prettier': 'off',
+  },
+}

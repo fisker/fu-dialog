@@ -1,19 +1,21 @@
 // eslint-disable-next-line no-new-func
 export const globalThis = Function('return this')()
 
-export const toString = Object.prototype.toString
+export const {
+  prototype: {toString},
+} = Object
 
 export const forEach =
   Array.prototype.forEach ||
   function forEach(fn) {
     let i = 0
-    const length = this.length
+    const {length} = this
     for (; i < length; i++) {
       fn.call(this, this[i], i, this)
     }
   }
 
-export const document = globalThis.document
+export const {document} = globalThis
 
 export function noop() {}
 

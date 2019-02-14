@@ -1,9 +1,9 @@
-import _ from '..';
-import {getType, globalThis} from '../src/shared';
-import {on} from '../src/dom';
+import _ from '../src'
+import {getType, globalThis, document} from '../src/shared'
+import {on} from '../src/dom'
 
 function createTestBtn(text, props = {}) {
-  const el = document.createElement('button');
+  const el = document.createElement('button')
   Object.assign(
     el,
     {
@@ -11,13 +11,13 @@ function createTestBtn(text, props = {}) {
       textContent: text,
     },
     props
-  );
+  )
 
-  return el;
+  return el
 }
 
-var container = document.getElementById('js-data-types');
-[
+var container = document.getElementById('js-data-types')
+;[
   undefined,
   null,
   123,
@@ -31,23 +31,23 @@ var container = document.getElementById('js-data-types');
   new Error('error'),
   /regexp/,
 ].forEach(value => {
-  const btn = createTestBtn(`${getType(value)}: ${String(value)}`);
+  const btn = createTestBtn(`${getType(value)}: ${String(value)}`)
   on(btn, 'click', function() {
-    _.alert(value);
-  });
-  container.appendChild(btn);
-});
+    _.alert(value)
+  })
+  container.appendChild(btn)
+})
 
 function customActions() {
   function createBtn(tagName, props) {
-    var el = document.createElement(tagName);
-    Object.assign(el, props);
-    el.className = 'f-dialog__action';
+    var el = document.createElement(tagName)
+    Object.assign(el, props)
+    el.className = 'f-dialog__action'
 
     if (tagName === 'button') {
-      el.type = 'button';
+      el.type = 'button'
     }
-    return el;
+    return el
   }
 
   var dialog = _.dialog({
@@ -57,7 +57,7 @@ function customActions() {
       {
         text: '按钮Object',
         action: function() {
-          console.log(this);
+          console.log(this)
         },
       },
       createBtn('button', {
@@ -74,51 +74,51 @@ function customActions() {
         el: function() {
           return createBtn('button', {
             textContent: 'el: 函数',
-          });
+          })
         },
       },
       function() {
-        alert('函数');
+        alert('函数')
       },
       ['类数组(如jQuery对象)'],
       _.action('_.action'),
       _.action.confirm('_.action.confirm'),
       _.action.cancel('_.action.cancel'),
     ],
-  });
+  })
 
-  dialog.container.style.width = 'auto';
+  dialog.container.style.width = 'auto'
 }
 
 function alertCallback() {
   _.alert('请点击确定', function() {
-    alert('【确定】按钮被点击');
-  });
+    alert('【确定】按钮被点击')
+  })
 }
 function alertPromise() {
   _.alert('请点击确定').then(function() {
-    alert('【确定】按钮被点击');
-  });
+    alert('【确定】按钮被点击')
+  })
 }
 function confirmCallback() {
   _.confirm('请点击一个按钮', function(result) {
-    alert(`【${result ? '确定' : '取消'}】按钮被点击`);
-  });
+    alert(`【${result ? '确定' : '取消'}】按钮被点击`)
+  })
 }
 function confirmPromise() {
   _.confirm('请点击一个按钮').then(function(result) {
-    alert(`【${result ? '确定' : '取消'}】按钮被点击`);
-  });
+    alert(`【${result ? '确定' : '取消'}】按钮被点击`)
+  })
 }
 function promptCallback() {
   _.prompt('请输入点什么', function(result) {
-    alert(`${typeof result} : ${result}`);
-  });
+    alert(`${typeof result} : ${result}`)
+  })
 }
 function promptPromise() {
   _.prompt({message: '请输入点什么', rows: 5}).then(function(result) {
-    alert(`${typeof result} : ${result}`);
-  });
+    alert(`${typeof result} : ${result}`)
+  })
 }
 
 function preventClose() {
@@ -126,21 +126,22 @@ function preventClose() {
     message: 'test',
     actions: [
       _.action.confirm('return false in action', function() {
-        return false;
+        return false
       }),
     ],
-  });
+  })
 }
 
 function preventClose2() {
   _.alert('return false in callback', function() {
-    return false;
-  });
+    return false
+  })
 }
 
-globalThis._ = _;
+globalThis._ = _
 globalThis.demo = {
   customActions,
+  preventClose,
   preventClose2,
   alertCallback,
   alertPromise,
@@ -148,4 +149,4 @@ globalThis.demo = {
   confirmPromise,
   promptCallback,
   promptPromise,
-};
+}

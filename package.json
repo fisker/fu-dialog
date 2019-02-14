@@ -1,14 +1,16 @@
 {
   "name": "f-dialog",
   "version": "1.0.0",
-  "description": "html dialog",
-  "main": "lib/index.js",
+  "description": "fisker's dialog",
+  "main": "lib/f-dialog.min.js",
   "keywords": ["dialog", "alert", "confirm", "prompt", "promise"],
   "repository": "fisker/f-dialog",
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@xwtec/eslint-config": "^3.3.1",
     "core-js": "^2.6.4",
+    "cssnano-cli": "^1.0.5",
     "dialog-polyfill": "^0.4.10",
     "es6-promise": "^4.2.5",
     "node-sass": "^4.11.0",
