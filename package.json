@@ -1,0 +1,43 @@
+{
+  "name": "f-dialog",
+  "version": "1.0.0",
+  "description": "html dialog",
+  "main": "lib/index.js",
+  "keywords": ["dialog", "alert", "confirm", "prompt", "promise"],
+  "repository": "fisker/f-dialog",
+  "author": "fisker <lionkay@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^2.6.4",
+    "dialog-polyfill": "^0.4.10",
+    "es6-promise": "^4.2.5",
+    "node-sass": "^4.11.0",
+    "object-assign": "^4.1.1",
+    "object.assign": "^4.1.0",
+    "rollup-plugin-uglify": "^6.0.2"
+  },
+  "scripts": {
+    "dev": "parcel demo/index.html --open",
+    "build": "cd scripts && bash ./build.sh",
+    "build2": "cd scripts && bash ./build2.sh"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "cssnano": "^4.1.9",
+    "eslint": "^5.13.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.3",
+    "np": "^4.0.2",
+    "prettier": "^1.16.4",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "sass": "^1.17.0",
+    "uglify-js": "^3.4.9"
+  }
+}
