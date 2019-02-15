@@ -49,7 +49,9 @@
   "license": "MIT",
   "main": "lib/full/f-dialog.min.js",
   "name": "f-dialog",
-  "publishConfig": {"registry": "https://registry.npmjs.org/"},
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": "fisker/f-dialog",
   "scripts": {
     "build": "npm-run-all --sequential clean build:*",
@@ -64,5 +66,5 @@
     "release:npm": "np --no-yarn --no-cleanup",
     "test": "jest"
   },
-  "version": "0.0.0"
+  "version": "1.0.0"
 }
