@@ -52,7 +52,7 @@
   "publishConfig": {"registry": "https://registry.npmjs.org/"},
   "repository": "fisker/f-dialog",
   "scripts": {
-    "build": "npm-run-all --parallel clean build:*",
+    "build": "npm-run-all --sequential clean build:*",
     "build:css": "bash ./scripts/build-css.sh",
     "build:js": "bash ./scripts/build-js.sh",
     "build:package": "bash ./scripts/build-package.sh",
@@ -60,7 +60,7 @@
     "clean": "bash ./scripts/clean.sh",
     "dev": "parcel demo/index.html --open",
     "lint": "eslint src/**/*.js",
-    "release": "npm-run-all --parallel lint build test release:*",
+    "release": "npm-run-all --sequential lint build test release:*",
     "release:npm": "np --no-yarn --no-cleanup",
     "test": "jest"
   },

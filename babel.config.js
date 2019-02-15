@@ -3,7 +3,7 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        debug: true,
+        debug: false,
         useBuiltIns: false,
         exclude: ['transform-typeof-symbol'],
         modules: false,
