@@ -1,4 +1,4 @@
-const NS = 'f-dialog'
+const NS = 'fu-dialog'
 
 export const CONTAINER = NS
 export const HEAD = `${NS}__head`

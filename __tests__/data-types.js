@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import {JSDOM} from 'jsdom'
-import pkg from '../package.json'
 import getType from '../src/utils/get-type'
 
 const testData = [
@@ -18,7 +17,7 @@ const testData = [
   /regexp/,
 ]
 
-const libSource = fs.readFileSync(path.join(__dirname, '..', pkg.main), 'UTF-8')
+const libSource = fs.readFileSync(require.resolve('../'), 'UTF-8')
 
 beforeEach(() => {
   const dom = new JSDOM('', {runScripts: 'outside-only'})

@@ -1,10 +1,11 @@
 const pkg = require('../package.json')
 
-const libName = 'fDialog'
+const libName = 'dialog'
+const fileName = libName
 
 module.exports = {
   libName,
-  fileName: pkg.name,
+  fileName,
   versions: [
     {
       dist: 'full',
@@ -21,7 +22,7 @@ module.exports = {
   version: pkg.version,
   author: pkg.author,
   license: pkg.license,
-  banner: `/*! ${libName} v${pkg.version} | ${pkg.author} | ${
+  banner: `/*! ${pkg.name} v${pkg.version} | ${pkg.author} | ${
     pkg.license
   } License */`,
 }

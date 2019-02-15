@@ -1,9 +1,8 @@
 import fs from 'fs'
 import path from 'path'
-import pkg from '../package.json'
 import {JSDOM} from 'jsdom'
 
-const libSource = fs.readFileSync(path.join(__dirname, '..', pkg.main), 'UTF-8')
+const libSource = fs.readFileSync(require.resolve('../'), 'UTF-8')
 const {window} = new JSDOM('', {runScripts: 'outside-only'})
 window.eval(libSource)
 delete window.HTMLDialogElement

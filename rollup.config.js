@@ -1,15 +1,17 @@
 // rollup.config.js
 import commonjs from 'rollup-plugin-commonjs'
 import nodeResolve from 'rollup-plugin-node-resolve'
+import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
 
 const buildConfig = require('./scripts/build.config')
 
 const rolllupPlugins = [
-  nodeResolve(),
   commonjs({
     include: 'node_modules/**',
   }),
+  json(),
+  nodeResolve(),
   babel(),
 ]
 
