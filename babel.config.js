@@ -15,4 +15,9 @@ module.exports = {
     // 'transform-es3-member-expression-literals',
     // 'transform-es3-property-literals',
   ],
+  env: {
+    test: {
+      presets: ['@babel/preset-env', {}],
+    },
+  },
 }

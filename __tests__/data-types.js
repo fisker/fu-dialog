@@ -1,7 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import {JSDOM} from 'jsdom'
-import {getType} from '../src/shared'
+import pkg from '../package.json'
+import getType from '../src/utils/get-type'
 
 const testData = [
   undefined,
@@ -17,10 +18,7 @@ const testData = [
   /regexp/,
 ]
 
-const libSource = fs.readFileSync(
-  path.join(__dirname, '../lib/f-dialog.min.js'),
-  'UTF-8'
-)
+const libSource = fs.readFileSync(path.join(__dirname, '..', pkg.main), 'UTF-8')
 
 beforeEach(() => {
   const dom = new JSDOM('', {runScripts: 'outside-only'})
@@ -29,7 +27,7 @@ beforeEach(() => {
   delete window.HTMLDialogElement
 })
 
-describe('support Data Types', () => {
+describe.skip('support Data Types', () => {
   testData.forEach(value => {
     test(`${getType(value)}`, () => {
       window.fDialog.alert(value)

@@ -5,11 +5,21 @@ import * as classNames from './classnames'
 import createElement from '../dom/create-element'
 import appendElement from '../dom/append-elements'
 import addListener from '../dom/add-listener'
+import preventEvent from '../dom/prevent-event'
 import parseDialogOptions from './parse-options'
 import parseAction from './parse-action'
 import renderAction from './render-action'
 import env from './env'
 import forEach from '../utils/for-each'
+
+function registerDialog(dialog) {
+  const {dialogPolyfill = {}} = env
+  const {registerDialog} = dialogPolyfill
+
+  if (registerDialog) {
+    return registerDialog(dialog)
+  }
+}
 
 class Dialog {
   constructor(options, open) {
@@ -25,29 +35,34 @@ class Dialog {
     const hasContent = options.content
     const hasMessage = 'message' in options
     const actions = (options.actions || []).map(parseAction)
-    let hasCloseButton = options.closeButton
-
-    if (typeof hasCloseButton !== 'boolean') {
-      hasCloseButton = defaultSettings.closeButton
-    }
+    const {closeButton: closeButtonText = '', onClose} = options
+    const {preventCancel, onCancel} = options
 
     const container = createElement('dialog', classNames.CONTAINER)
+    registerDialog(container)
 
-    if (env.dialogPolyfill && env.dialogPolyfill.registerDialog) {
-      env.dialogPolyfill.registerDialog(container)
+    if (preventCancel) {
+      preventEvent(container, 'cancel')
+    } else {
+      addListener(container, 'cancel', function() {
+        if (onCancel) {
+          onCancel()
+        }
+        dialog.remove()
+      })
     }
 
     this.container = container
 
-    if (hasCloseButton) {
+    if (closeButtonText) {
       const closeButton = createElement(container, 'button', {
         className: classNames.CLOSE_BTN,
-        innerHTML: '<span>close</span>',
+        innerHTML: `<span>${String(closeButtonText)}</span>`,
       })
 
       addListener(closeButton, 'click', function() {
-        if (options.onClose) {
-          options.onClose()
+        if (onClose) {
+          onClose()
         }
         dialog.remove()
       })

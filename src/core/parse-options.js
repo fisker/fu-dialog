@@ -2,12 +2,7 @@ import defaultSettings from './default-settings'
 import getType from '../utils/get-type'
 import assign from '../utils/assign'
 
-function parseOptions(
-  options,
-  defaultOptions = {
-    title: defaultSettings.title,
-  }
-) {
+function parseOptions(options, defaultOptions = defaultSettings) {
   const type = getType(options)
 
   if (type !== 'Object') {
