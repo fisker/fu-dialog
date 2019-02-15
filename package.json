@@ -50,9 +50,7 @@
   "license": "MIT",
   "main": "lib/full/dialog.min.js",
   "name": "fu-dialog",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+  "publishConfig": {"registry": "https://registry.npmjs.org/"},
   "repository": "fisker/fu-dialog",
   "scripts": {
     "build": "npm-run-all --sequential clean build:*",
