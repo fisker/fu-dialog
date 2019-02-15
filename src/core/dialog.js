@@ -1,4 +1,3 @@
-import defaultSettings from './default-settings'
 import document from '../utils/document'
 import * as classNames from './classnames'
 
@@ -19,6 +18,8 @@ function registerDialog(dialog) {
   if (registerDialog) {
     return registerDialog(dialog)
   }
+
+  return dialog
 }
 
 class Dialog {

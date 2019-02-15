@@ -5,5 +5,6 @@ module.exports = {
   extends: ['@xwtec'],
   rules: {
     'prettier/prettier': 'off',
+    'import/no-extraneous-dependencies': 'warn',
   },
 }

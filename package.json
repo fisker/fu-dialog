@@ -59,8 +59,9 @@
     "build:scss": "bash ./scripts/build-scss.sh",
     "clean": "bash ./scripts/clean.sh",
     "dev": "parcel demo/index.html --open",
+    "lint": "eslint src/**/*.js",
+    "release": "npm-run-all --parallel lint build test release:*",
     "release:npm": "np --no-yarn --no-cleanup",
-    "release": "npm-run-all --parallel build test release:*",
     "test": "jest"
   },
   "version": "1.0.0"
