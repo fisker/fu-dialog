@@ -1,16 +1,17 @@
 import fs from 'fs'
 import path from 'path'
 import {JSDOM} from 'jsdom'
+import buildConfig from '../scripts/build.config'
 
 const libSource = fs.readFileSync(require.resolve('../'), 'UTF-8')
 const {window} = new JSDOM('', {runScripts: 'outside-only'})
 window.eval(libSource)
 delete window.HTMLDialogElement
-const {fDialog} = window
+const {[buildConfig.libName]: lib} = window
 
 describe('exports', () => {
-  test('window.fDialog should be a function', () => {
-    expect(typeof fDialog).toBe('function')
+  test('window.${buildConfig.libName} should be a function', () => {
+    expect(typeof lib).toBe('function')
   })
   ;[
     'setDefault',
@@ -21,18 +22,17 @@ describe('exports', () => {
     'prompt',
     'action',
   ].forEach(method => {
-    test(`fDialog.${method} should be a function`, () => {
-      expect(typeof fDialog[method]).toBe('function')
+    test(`${buildConfig.libName}.${method} should be a function`, () => {
+      expect(typeof lib[method]).toBe('function')
     })
   })
   ;['confirm', 'cancel'].forEach(method => {
-    test(`fDialog.action.${method} should be a function`, () => {
-      expect(typeof fDialog.action[method]).toBe('function')
+    test(`${buildConfig.libName}.action.${method} should be a function`, () => {
+      expect(typeof lib.action[method]).toBe('function')
     })
   })
 
-  test('fDialog.Dialog should be a class', () => {
-    window.eval(`var myDialog = new fDialog.Dialog()`)
-    expect(window.myDialog).toBeInstanceOf(fDialog.Dialog)
+  test('${buildConfig.libName}.Dialog should be a class', () => {
+    expect(new lib.Dialog()).toBeInstanceOf(lib.Dialog)
   })
 })

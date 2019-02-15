@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import {JSDOM} from 'jsdom'
 import getType from '../src/utils/get-type'
+import buildConfig from '../scripts/build.config'
 
 const testData = [
   undefined,
@@ -29,9 +30,9 @@ beforeEach(() => {
 describe.skip('support Data Types', () => {
   testData.forEach(value => {
     test(`${getType(value)}`, () => {
-      window.fDialog.alert(value)
+      window[buildConfig.libName].alert(value)
       const messageBody = window.document.querySelector(
-        '.f-dialog__message-body'
+        `.${buildConfig.ns}__message-body`
       ).textContent
       expect(messageBody).toBe(String(value))
     })

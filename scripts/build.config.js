@@ -1,9 +1,12 @@
 const pkg = require('../package.json')
 
-const libName = 'dialog'
-const fileName = libName
+const ns = pkg.name
+
+const libName = 'fd'
+const fileName = 'dialog'
 
 module.exports = {
+  ns,
   libName,
   fileName,
   versions: [
