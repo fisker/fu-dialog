@@ -18,6 +18,12 @@ module.exports = {
       },
     },
     {
+      files: 'lib/**/*.js',
+      options: {
+        trailingComma: 'none',
+      },
+    },
+    {
       files: '.ts',
       options: {
         parser: 'typescript',

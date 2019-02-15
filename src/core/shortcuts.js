@@ -1,13 +1,12 @@
-import {
-  Dialog,
-  parseDialogOptions,
-  createConfirmAction,
-  createCancelAction,
-} from './dialog'
-import {noop} from './shared'
+import noop from '../utils/noop'
 import * as classNames from './classnames'
-import {createElement, addClass, appendElement} from './dom'
+import createElement from '../dom/create-element'
+import addClass from '../dom/add-class'
+import appendElement from '../dom/append-elements'
 import defaultSettings from './default-settings'
+import Dialog from './dialog'
+import {createConfirmAction, createCancelAction} from './create-action'
+import parseDialogOptions from './parse-options'
 
 export function alert(options, onAction = noop) {
   options = parseDialogOptions(options)
@@ -79,7 +78,6 @@ export function prompt(options, onAction = noop) {
       })
     } else {
       input = createElement('input', {
-        type: 'text',
         className: classNames.INPUT,
         placeholder: options.placeholder || defaultSettings.promptPlaceholder,
       })

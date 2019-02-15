@@ -1,23 +1,33 @@
-import _ from '../src'
-import {getType, globalThis, document} from '../src/shared'
-import {on} from '../src/dom'
+import getType from '../src/utils/get-type'
+import globalThis from '../src/utils/global-this'
+import document from '../src/utils/document'
+import forEach from '../src/utils/for-each'
+import assign from '../src/utils/assign'
+import noop from '../src/utils/noop'
+import addListener from '../src/dom/add-listener'
+import createElement from '../src/dom/create-element'
+import _ from '../src/full-version'
 
-function createTestBtn(text, props = {}) {
-  const el = document.createElement('button')
-  Object.assign(
-    el,
+function createTestBtn(text, props = {}, onClick = noop) {
+  if (typeof props === 'function') {
+    onClick = props || noop
+    props = {}
+  }
+
+  props = assign(
     {
-      type: 'button',
       textContent: text,
     },
     props
   )
 
+  const el = createElement('button', props)
+  addListener(el, onClick)
   return el
 }
 
 var container = document.getElementById('js-data-types')
-;[
+var dataTypes = [
   undefined,
   null,
   123,
@@ -27,26 +37,22 @@ var container = document.getElementById('js-data-types')
   [1, 2, 3],
   'string',
   new Date(),
-  Symbol('symbol'),
+  globalThis.Symbol ? Symbol('symbol') : 'symbol(string)',
   new Error('error'),
   /regexp/,
-].forEach(value => {
+]
+forEach.call(dataTypes, value => {
   const btn = createTestBtn(`${getType(value)}: ${String(value)}`)
-  on(btn, 'click', function() {
+  addListener(btn, 'click', function() {
     _.alert(value)
   })
   container.appendChild(btn)
 })
 
 function customActions() {
-  function createBtn(tagName, props) {
-    var el = document.createElement(tagName)
-    Object.assign(el, props)
+  function createActionBtn(tagName, props) {
+    var el = createElement(tagName, props)
     el.className = 'f-dialog__action'
-
-    if (tagName === 'button') {
-      el.type = 'button'
-    }
     return el
   }
 
@@ -60,11 +66,11 @@ function customActions() {
           console.log(this)
         },
       },
-      createBtn('button', {
+      createActionBtn('button', {
         textContent: 'HTML元素',
       }),
       {
-        el: createBtn('a', {
+        el: createActionBtn('a', {
           textContent: 'el: HTML元素',
           href: globalThis.location.href,
           target: '_blank',
@@ -72,7 +78,7 @@ function customActions() {
       },
       {
         el: function() {
-          return createBtn('button', {
+          return createActionBtn('button', {
             textContent: 'el: 函数',
           })
         },

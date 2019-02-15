@@ -2,30 +2,30 @@
 import commonjs from 'rollup-plugin-commonjs'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
-import {uglify} from 'rollup-plugin-uglify'
-import pkg from './package.json'
 
-const libName = 'fDialog'
-const fileName = pkg.name
+const buildConfig = require('./scripts/build.config')
 
-export default {
-  input: 'src/index.js',
+const rolllupPlugins = [
+  nodeResolve(),
+  commonjs({
+    include: 'node_modules/**',
+  }),
+  babel(),
+]
+
+const versions = buildConfig.versions.map(version => ({
+  input: `${buildConfig.src}/${version.entry}.js`,
   output: {
-    file: `lib/${fileName}.js`,
+    file: `${buildConfig.dist}/${version.dist}/${buildConfig.fileName}.js`,
     format: 'umd',
-    name: libName,
+    name: buildConfig.libName,
     sourcemap: true,
-    banner: `/*! ${libName} v${pkg.version} | ${pkg.author} | ${
-      pkg.license
-    } License */`,
+    banner: buildConfig.banner,
     legacy: true,
     strict: true,
+    treeshake: true,
   },
-  plugins: [
-    nodeResolve(),
-    commonjs({
-      include: 'node_modules/**',
-    }),
-    babel(),
-  ],
-}
+  plugins: rolllupPlugins,
+}))
+
+export default versions

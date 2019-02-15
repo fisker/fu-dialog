@@ -8,39 +8,45 @@
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@xwtec/eslint-config": "^3.3.1",
-    "core-js": "^2.6.4",
-    "cssnano-cli": "^1.0.5",
     "dialog-polyfill": "^0.4.10",
-    "es6-promise": "^4.2.5",
-    "node-sass": "^4.11.0",
-    "object-assign": "^4.1.1",
-    "object.assign": "^4.1.0",
-    "rollup-plugin-uglify": "^6.0.2"
+    "es6-promise": "^4.2.5"
   },
   "scripts": {
     "dev": "parcel demo/index.html --open",
-    "build": "cd scripts && bash ./build.sh",
-    "build2": "cd scripts && bash ./build2.sh",
-    "release": "np --no-yarn --no-cleanup"
+    "clean": "bash ./scripts/clean.sh",
+    "build:js": "bash ./scripts/build-js.sh",
+    "build:css": "bash ./scripts/build-css.sh",
+    "build:scss": "bash ./scripts/build-scss.sh",
+    "build:package": "bash ./scripts/build-package.sh",
+    "build": "npm-run-all --parallel clean build:*",
+    "release": "np --no-yarn --no-cleanup",
+    "test": "jest"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "cssnano": "^4.1.9",
+    "@xwtec/eslint-config": "^3.3.1",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-es5-property-mutators": "^6.24.1",
+    "cp-file": "^6.0.0",
+    "cssnano-cli": "^1.0.5",
     "eslint": "^5.13.0",
+    "fast-json-stable-stringify": "^2.0.0",
     "husky": "^1.3.1",
-    "lint-staged": "^8.1.3",
+    "jest": "^24.1.0",
+    "jsdom": "^13.2.0",
+    "lint-staged": "^8.1.4",
+    "node-sass": "^4.11.0",
     "np": "^4.0.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "sass": "^1.17.0",
     "uglify-js": "^3.4.9"
   }
 }

@@ -3,9 +3,16 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        useBuiltIns: 'entry',
+        debug: true,
+        useBuiltIns: false,
+        exclude: ['transform-typeof-symbol'],
+        modules: false,
       },
     ],
   ],
-  plugins: [],
-};
+  plugins: [
+    // 'transform-es5-property-mutators',
+    // 'transform-es3-member-expression-literals',
+    // 'transform-es3-property-literals',
+  ],
+}
