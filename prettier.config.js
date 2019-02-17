@@ -12,13 +12,13 @@ module.exports = {
   // overrides
   overrides: [
     {
-      files: '*.js',
+      files: '*.{js,mjs}',
       options: {
         parser: 'babel',
       },
     },
     {
-      files: 'lib/**/*.js',
+      files: 'lib/**/*.{js,mjs}',
       options: {
         trailingComma: 'none',
       },

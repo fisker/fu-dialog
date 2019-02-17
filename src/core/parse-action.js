@@ -1,6 +1,9 @@
 import isArrayLike from '../utils/is-array-like'
 import isNode from '../utils/is-node'
-import createAction, {createConfirmAction} from './create-action'
+import createAction, {
+  createConfirmAction,
+  createCancelAction,
+} from './create-action'
 
 function parseAction(action) {
   if (typeof action === 'string') {
@@ -21,6 +24,10 @@ function parseAction(action) {
 
   if (typeof action.el === 'function') {
     action.el = action.el()
+  }
+
+  if (action === createConfirmAction || action === createCancelAction) {
+    action = action()
   }
 
   if (typeof action === 'function' || typeof action === 'boolean') {

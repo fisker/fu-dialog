@@ -30,7 +30,12 @@ function rolllupPlugins(min) {
 
 function rollupOutput({format, version, min}) {
   const banner = buildConfig.banner[min ? 'mini' : 'full']
-  const filename = [buildConfig.fileName, format, min ? 'min' : '', 'js']
+  const filename = [
+    buildConfig.fileName,
+    format,
+    min ? 'min' : '',
+    format === 'esm' ? 'mjs' : 'js',
+  ]
     .filter(Boolean)
     .join('.')
   const file = `${buildConfig.dist}/${version}/${filename}`
