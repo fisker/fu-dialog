@@ -6,7 +6,7 @@ const libName = 'fd'
 const fileName = 'dialog'
 const banner = {
   full: createBanner({
-    template: 'simple',
+    template: 'normal',
   }),
   mini: createBanner({
     template: 'inline',
