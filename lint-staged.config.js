@@ -2,5 +2,7 @@
 // see https://github.com/xwtec/dotfiles/lint-staged
 
 module.exports = {
-  '*.{js,md,json,scss}': ['prettier --write', 'git add'],
-};
+  '*.js': ['prettier --write', 'eslint', 'git add'],
+  '*.scss': ['prettier --write', 'stylelint', 'git add'],
+  '*.{md,json}': ['prettier --write', 'git add'],
+}

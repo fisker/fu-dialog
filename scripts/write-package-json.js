@@ -1,9 +1,8 @@
-const fs = require('fs')
 const path = require('path')
-const pkg = require('../package.json')
-const buildConfig = require('./build.config')
 const writePkg = require('write-pkg').sync
 const mem = require('mem')
+const pkg = require('../package.json')
+const buildConfig = require('./build.config')
 
 const getFile = mem(function getFile(format) {
   const ext = {

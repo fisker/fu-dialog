@@ -1,5 +1,5 @@
-const pkg = require('../package.json')
 const createBanner = require('create-banner')
+const pkg = require('../package.json')
 
 const ns = pkg.name
 const libName = 'fd'

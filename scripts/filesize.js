@@ -11,7 +11,7 @@ const files = readDirDeep('./lib', {
     // '**/*.css',
     '**/*.min.css',
   ],
-}).map(file => 'lib/' + file)
+}).map(file => `lib/${file}`)
 
 const filesize = files.map(file => {
   const content = fs.readFileSync(file)
