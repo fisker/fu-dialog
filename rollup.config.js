@@ -6,6 +6,7 @@ import babel from 'rollup-plugin-babel'
 import {uglify} from 'rollup-plugin-uglify'
 import minify from 'rollup-plugin-babel-minify'
 import {terser} from 'rollup-plugin-terser'
+import analyze from 'rollup-plugin-analyzer'
 
 const buildConfig = require('./scripts/build.config')
 
@@ -23,6 +24,7 @@ function rolllupPlugins(min) {
           sourceMap: false,
         })
       : null,
+    // analyze(),
   ]
 }
 
