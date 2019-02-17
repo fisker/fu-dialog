@@ -12,10 +12,10 @@ cpFile.sync(
   path.join(distFolder, 'scss/_dialog-polyfill.scss')
 )
 
-cpFile.sync(
-  require.resolve('dialog-polyfill/dialog-polyfill.css'),
-  path.join(distFolder, 'less/_dialog-polyfill.less')
-)
+// cpFile.sync(
+//   require.resolve('dialog-polyfill/dialog-polyfill.css'),
+//   path.join(distFolder, 'less/_dialog-polyfill.less')
+// )
 
 copyScss(
   path.join(srcFolder, '_dialog.scss'),
@@ -30,9 +30,16 @@ function copyScss(source, dist) {
 function convertScss2Less(scssFile, lessFile) {
   const scssSource = fs.readFileSync(scssFile, 'UTF-8')
   const converter = new scss2less()
-  const lessSource = converter.process(scssSource, {
+  let lessSource = converter.process(scssSource, {
     fileInfo: {filename: path.basename(scssFile)},
   })
+
+  lessSource = lessSource.replace(/@content/g, '@content()')
+  lessSource = lessSource.replace(
+    '.dialog-backdrop()',
+    '.dialog-backdrop(@content)'
+  )
+
   fs.writeFileSync(
     lessFile,
     buildConfig.banner.full + '\n' + lessSource,
@@ -40,7 +47,7 @@ function convertScss2Less(scssFile, lessFile) {
   )
 }
 
-convertScss2Less(
-  path.join(srcFolder, '_dialog.scss'),
-  path.join(distFolder, 'less/_dialog.less')
-)
+// convertScss2Less(
+//   path.join(srcFolder, '_dialog.scss'),
+//   path.join(distFolder, 'less/_dialog.less')
+// )

@@ -5,7 +5,9 @@ const ns = pkg.name
 const libName = 'fd'
 const fileName = 'dialog'
 const banner = {
-  full: createBanner({}),
+  full: createBanner({
+    template: 'simple',
+  }),
   mini: createBanner({
     template: 'inline',
   }),
