@@ -5,6 +5,7 @@ import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
 import {uglify} from 'rollup-plugin-uglify'
 import minify from 'rollup-plugin-babel-minify'
+import {terser} from 'rollup-plugin-terser'
 
 const buildConfig = require('./scripts/build.config')
 
@@ -53,7 +54,7 @@ function buildVersion(versionConfig, min) {
       rollupOutput({
         format,
         version: versionConfig.dist,
-        min: min,
+        min,
       })
     ),
     plugins: rolllupPlugins(min),
