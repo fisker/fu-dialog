@@ -1,9 +1,15 @@
 const pkg = require('../package.json')
+const createBanner = require('create-banner')
 
 const ns = pkg.name
-
 const libName = 'fd'
 const fileName = 'dialog'
+const banner = {
+  full: createBanner(),
+  mini: createBanner({
+    template: 'inline',
+  }),
+}
 
 module.exports = {
   ns,
@@ -11,21 +17,19 @@ module.exports = {
   fileName,
   versions: [
     {
-      dist: 'full',
+      dist: 'full-version',
       entry: 'full-version',
     },
     {
-      dist: 'pure',
+      dist: 'pure-version',
       entry: 'pure-version',
     },
   ],
   dist: 'lib',
   src: 'src',
-  defaultVersion: 'full',
   version: pkg.version,
   author: pkg.author,
   license: pkg.license,
-  banner: `/*! ${pkg.name} v${pkg.version} | ${pkg.author} | ${
-    pkg.license
-  } License */`,
+  banner,
+  formats: ['cjs', 'esm', 'umd', 'iife'],
 }

@@ -1,8 +1,13 @@
 # build css
-node-sass src/styles/full-version.scss lib/full/dialog.css --output-style expanded --source-map lib/full/
-node-sass src/styles/pure-version.scss lib/pure/dialog.css --output-style expanded --source-map lib/pure/
-prettier lib/{full,pure}/dialog.css --write
 
-# minify css
-cssnano lib/full/dialog.css lib/full/dialog.min.css
-cssnano lib/pure/dialog.css lib/pure/dialog.min.css
+# full-version
+node-sass src/styles/full-version.scss .cache/full-version.css --output-style expanded --source-map .cache
+postcss .cache/full-version.css --output lib/full-version/dialog.css
+prettier lib/full-version/dialog.css --write
+postcss .cache/full-version.css --output lib/full-version/dialog.min.css --env MINIFY
+
+# pure-version
+node-sass src/styles/pure-version.scss .cache/pure-version.css --output-style expanded --source-map .cache
+postcss .cache/pure-version.css --output lib/pure-version/dialog.css
+prettier lib/pure-version/dialog.css --write
+postcss .cache/pure-version.css --output lib/pure-version/dialog.min.css --env MINIFY
