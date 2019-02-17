@@ -66,7 +66,7 @@
     "clean": "bash ./scripts/clean.sh",
     "dev": "parcel demo/index.html --open",
     "dist": "npm-run-all --parallel dist:*",
-    "dist:npm": "np --no-yarn --no-cleanup --contents lib",
+    "dist:npm": "np --no-yarn --no-cleanup",
     "lint": "npm-run-all --parallel lint:*",
     "lint:css": "eslint src/**/*.js",
     "release": "npm-run-all --sequential lint clean build test dist",
