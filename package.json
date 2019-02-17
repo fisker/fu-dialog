@@ -74,7 +74,7 @@
     "lint:css": "eslint src/**/*.js",
     "release": "npm-run-all --sequential lint clean build test dist",
     "test": "jest",
-    "version": "npm-run-all --parallel build"
+    "version": "npm-run-all --parallel build && git add"
   },
   "style": "lib/full-version/dialog.min.css",
   "unpkg": "lib/full-version/dialog.umd.min.js",
