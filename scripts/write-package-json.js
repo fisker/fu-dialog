@@ -7,7 +7,7 @@ const buildConfig = require('./build.config')
 const getFile = mem(function getFile(format) {
   const ext = {
     cjs: '.cjs.min.js',
-    esm: '.esm.min.js',
+    esm: '.esm.min.mjs',
     umd: '.umd.min.js',
     css: '.min.css',
   }[format]

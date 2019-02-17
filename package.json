@@ -62,7 +62,7 @@
   "keywords": ["dialog", "alert", "confirm", "prompt", "promise"],
   "license": "MIT",
   "main": "lib/full-version/dialog.cjs.min.js",
-  "module": "lib/full-version/dialog.esm.min.js",
+  "module": "lib/full-version/dialog.esm.min.mjs",
   "name": "fu-dialog",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
