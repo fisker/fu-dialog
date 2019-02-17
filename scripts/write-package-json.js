@@ -21,6 +21,7 @@ pkg.main = getFile('cjs')
 pkg.module = getFile('esm')
 pkg.unpkg = getFile('umd')
 pkg.style = getFile('css')
+pkg.browser = getFile('umd')
 
 fs.writeFileSync(
   path.join(__dirname, '../package.json'),

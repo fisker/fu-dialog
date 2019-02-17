@@ -1,9 +1,11 @@
 {
-  "author": "fisker <lionkay@gmail.com>",
-  "dependencies": {
-    "rollup-plugin-babel-minify": "^7.0.0",
-    "rollup-plugin-uglify": "^6.0.2"
+  "author": {
+    "email": "lionkay@gmail.com",
+    "name": "fisker",
+    "url": "https://www.fiskercheung.com/"
   },
+  "browser": "lib/full-version/dialog.umd.min.js",
+  "dependencies": {},
   "description": "fisker's dialog",
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -36,9 +38,11 @@
     "prettier": "^1.16.4",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-babel-minify": "^7.0.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.2",
     "uglify-js": "^3.4.9",
     "yarn": "^1.13.0"
   },
@@ -59,7 +63,7 @@
     "clean": "bash ./scripts/clean.sh",
     "dev": "parcel demo/index.html --open",
     "dist": "npm-run-all --parallel dist:*",
-    "dist:npm": "np --no-yarn --no-cleanup",
+    "dist:npm": "np --no-yarn --no-cleanup --contents lib",
     "lint": "npm-run-all --parallel lint:*",
     "lint:css": "eslint src/**/*.js",
     "release": "npm-run-all --sequential lint clean build test dist",
