@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const stringify = require('fast-json-stable-stringify')
 const pkg = require('../package.json')
 const buildConfig = require('./build.config')
+const writePkg = require('write-pkg').sync
 const mem = require('mem')
 
 const getFile = mem(function getFile(format) {
@@ -36,10 +36,4 @@ const entries = (entries => {
   jsdelivr: 'umd',
 })
 
-Object.assign(pkg, entries)
-
-fs.writeFileSync(
-  path.join(__dirname, '../package.json'),
-  stringify(pkg),
-  'UTF-8'
-)
+writePkg(path.join(__dirname, '../package.json'), Object.assign(pkg, entries))
