@@ -32,7 +32,7 @@ function rollupOutput({format, version, min}) {
     .join('.')
   const file = `${buildConfig.dist}/${version}/${filename}`
   const name = buildConfig.libName
-  const sourcemap = true
+  const sourcemap = !min
 
   return {
     banner,
