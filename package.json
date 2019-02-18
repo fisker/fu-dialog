@@ -4,7 +4,7 @@
     "name": "fisker",
     "url": "https://www.fiskercheung.com/"
   },
-  "browser": "lib/full-version/dialog.umd.min.js",
+  "browser": "lib/full-version/dialog.min.js",
   "description": "fisker's dialog",
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -58,10 +58,10 @@
     "yarn": "^1.13.0"
   },
   "files": ["lib", "src", "package.json", "LICENSE", "README.md"],
-  "jsdelivr": "lib/full-version/dialog.umd.min.js",
+  "jsdelivr": "lib/full-version/dialog.min.js",
   "keywords": ["dialog", "alert", "confirm", "prompt", "promise"],
   "license": "MIT",
-  "main": "lib/full-version/dialog.cjs.min.js",
+  "main": "lib/full-version/dialog.common.js",
   "module": "lib/full-version/dialog.esm.min.mjs",
   "name": "fu-dialog",
   "publishConfig": {
@@ -88,6 +88,6 @@
     "gzip-size": "^5.0.0"
   },
   "style": "lib/full-version/dialog.min.css",
-  "unpkg": "lib/full-version/dialog.umd.min.js",
+  "unpkg": "lib/full-version/dialog.min.js",
   "version": "1.0.9"
 }

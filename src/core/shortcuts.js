@@ -3,12 +3,12 @@ import * as classNames from './classnames'
 import createElement from '../dom/create-element'
 import addClass from '../dom/add-class'
 import appendElement from '../dom/append-elements'
-import defaultSettings from './default-settings'
+import defaults from './defaults'
 import Dialog from './dialog'
 import {createConfirmAction, createCancelAction} from './create-action'
 import parseDialogOptions from './parse-options'
 
-export function alert(options, onAction = noop) {
+function alert(options, onAction = noop) {
   options = parseDialogOptions(options)
 
   if (!options.actions) {
@@ -26,7 +26,7 @@ export function alert(options, onAction = noop) {
   return dialog
 }
 
-export function confirm(options, onAction = noop) {
+function confirm(options, onAction = noop) {
   options = parseDialogOptions(options)
 
   function onConfirm() {
@@ -41,7 +41,7 @@ export function confirm(options, onAction = noop) {
     const confirmBtn = createConfirmAction(onConfirm)
     const cancelBtn = createCancelAction(onCancel)
 
-    if (defaultSettings.reverseActions) {
+    if (defaults.reverseActions) {
       options.actions = [cancelBtn, confirmBtn]
     } else {
       options.actions = [confirmBtn, cancelBtn]
@@ -57,7 +57,7 @@ export function confirm(options, onAction = noop) {
   return dialog
 }
 
-export function prompt(options, onAction = noop) {
+function prompt(options, onAction = noop) {
   options = parseDialogOptions(options, {
     title: null,
     closeButton: false,
@@ -74,12 +74,12 @@ export function prompt(options, onAction = noop) {
       input = createElement('textarea', {
         className: classNames.INPUT,
         rows: options.rows,
-        placeholder: options.placeholder || defaultSettings.promptPlaceholder,
+        placeholder: options.placeholder || defaults.promptPlaceholder,
       })
     } else {
       input = createElement('input', {
         className: classNames.INPUT,
-        placeholder: options.placeholder || defaultSettings.promptPlaceholder,
+        placeholder: options.placeholder || defaults.promptPlaceholder,
       })
     }
   }
@@ -97,7 +97,7 @@ export function prompt(options, onAction = noop) {
 
     const cancelBtn = createCancelAction(onCancel)
 
-    if (defaultSettings.reverseActions) {
+    if (defaults.reverseActions) {
       options.actions = [cancelBtn, confirmBtn]
     } else {
       options.actions = [confirmBtn, cancelBtn]
@@ -114,3 +114,5 @@ export function prompt(options, onAction = noop) {
 
   return dialog
 }
+
+export {alert, confirm, prompt}

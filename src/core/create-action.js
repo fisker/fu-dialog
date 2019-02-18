@@ -5,7 +5,7 @@ import returnTrue from '../utils/return-true'
 import parseClassNames from '../dom/parse-classnames'
 import createElement from '../dom/create-element'
 import * as classNames from './classnames.js'
-import defaultSettings from './default-settings'
+import defaults from './defaults'
 
 function createAction(actionText, props, action = noop) {
   if (typeof props === 'function') {
@@ -50,7 +50,7 @@ function createTypedAction(type) {
   }
 
   return function(actionText, action) {
-    const DEFAULT_TEXT = defaultSettings[`${type}ActionText`]
+    const DEFAULT_TEXT = defaults[`${type}ActionText`]
 
     if (typeof actionText === 'function') {
       action = actionText

@@ -1,9 +1,13 @@
 const createBanner = require('create-banner')
 const pkg = require('../package.json')
 
+const {version} = pkg
+
 const ns = pkg.name
+
 const libName = 'fd'
 const fileName = 'dialog'
+
 const banner = {
   full: createBanner({
     template: 'simple',
@@ -13,25 +17,55 @@ const banner = {
   }),
 }
 
+const dist = 'lib'
+const src = 'src'
+
+const builds = {
+  cjs: {
+    dist: `${fileName}.common`,
+    minify: false,
+    ext: 'js',
+    standalone: false,
+  },
+  esm: {
+    dist: `${fileName}.esm`,
+    minify: true,
+    ext: 'mjs',
+    standalone: true,
+  },
+  umd: {
+    dist: `${fileName}`,
+    minify: true,
+    ext: 'js',
+    standalone: true,
+  },
+  // iife: {
+  //   dist: `${fileName}.global`,
+  //   minify: true,
+  //   ext: 'js',
+  //   standalone: true,
+  // },
+}
+
+const versions = [
+  {
+    dist: 'full-version',
+    entry: 'full-version',
+  },
+  {
+    dist: 'pure-version',
+    entry: 'pure-version',
+  },
+]
+
 module.exports = {
   ns,
   libName,
   fileName,
-  versions: [
-    {
-      dist: 'full-version',
-      entry: 'full-version',
-    },
-    {
-      dist: 'pure-version',
-      entry: 'pure-version',
-    },
-  ],
-  dist: 'lib',
-  src: 'src',
-  version: pkg.version,
-  author: pkg.author,
-  license: pkg.license,
+  dist,
+  src,
+  version,
   banner,
-  formats: ['cjs', 'esm', 'umd', 'iife'],
+  builds,
+  versions,
 }

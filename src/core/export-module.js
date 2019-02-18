@@ -1,26 +1,24 @@
 import Dialog from './dialog'
-import returnPromise from './return-promise'
+import shortCutWrapper from './shortcut-wrapper'
 import assign from '../utils/assign'
-import identify from '../utils/identify'
-import defaultSettings from './default-settings'
-import setDefault from './set-default'
+import defaults, {setDefaults} from './defaults'
 import {alert, confirm, prompt} from './shortcuts'
 import createAction, {
   createConfirmAction,
   createCancelAction,
 } from './create-action'
-import env from './env'
+import env, {setEnvironment} from './env'
 
 function exportModule() {
-  const shortCutWrapper = env.Promise ? returnPromise : identify
-
   function dialog(options) {
     return new Dialog(options)
   }
 
   assign(dialog, {
-    defaultSettings,
-    setDefault,
+    env,
+    setEnvironment,
+    defaults,
+    setDefaults,
     dialog,
     Dialog,
     alert: shortCutWrapper(alert),
