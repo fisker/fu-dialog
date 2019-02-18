@@ -5,12 +5,7 @@ const {table} = require('table')
 const fs = require('fs')
 
 const files = readDirDeep('./lib', {
-  patterns: [
-    // '**/*.umd.js',
-    '**/*.umd.min.js',
-    // '**/*.css',
-    '**/*.min.css',
-  ],
+  patterns: ['**/dialog.min.js', '**/dialog.min.css'],
 }).map(file => `lib/${file}`)
 
 const filesize = files.map(file => {

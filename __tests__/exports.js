@@ -15,7 +15,7 @@ describe('exports', () => {
     expect(typeof lib).toBe('function')
   })
   ;[
-    'setDefault',
+    'setDefaults',
     'dialog',
     'Dialog',
     'alert',

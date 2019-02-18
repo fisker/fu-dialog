@@ -2,7 +2,7 @@
 
 > dialog
 
-[![Gzip Size](http://img.badgesize.io/https://unpkg.com/fu-dialog/lib/full-version/dialog.umd.min.js?compression=gzip&style=flat-square)](https://unpkg.com/fu-dialog/lib/full-version/dialog.umd.min.js) |
+[![Gzip Size](http://img.badgesize.io/https://unpkg.com/fu-dialog/lib/full-version/dialog.min.js?compression=gzip&style=flat-square)](https://unpkg.com/fu-dialog/lib/full-version/dialog.min.js) |
 
 ## files
 
