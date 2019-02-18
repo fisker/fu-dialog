@@ -84,7 +84,7 @@
     "info": "node ./scripts/filesize.js",
     "release": "npm-run-all --sequential lint clean build info test dist",
     "test": "jest",
-    "version": "npm-run-all --parallel build && git add .",
+    "version": "npm-run-all --parallel build && git add lib",
     "gzip-size": "^5.0.0"
   },
   "style": "lib/full-version/dialog.min.css",

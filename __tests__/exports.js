@@ -11,7 +11,7 @@ delete window.HTMLDialogElement
 const {[buildConfig.libName]: lib} = window
 
 describe('exports', () => {
-  test('window.${buildConfig.libName} should be a function', () => {
+  test(`window.${buildConfig.libName} should be a function`, () => {
     expect(typeof lib).toBe('function')
   })
   ;[
@@ -33,7 +33,7 @@ describe('exports', () => {
     })
   })
 
-  test('${buildConfig.libName}.Dialog should be a class', () => {
+  test(`${buildConfig.libName}.Dialog should be a class`, () => {
     expect(new lib.Dialog()).toBeInstanceOf(lib.Dialog)
   })
 })

@@ -6,7 +6,6 @@ module.exports = {
   rules: {
     'prettier/prettier': 'off',
     'import/no-extraneous-dependencies': 'warn',
-    'no-template-curly-in-string': 'warn',
   },
   overrides: [
     {
