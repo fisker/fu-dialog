@@ -880,9 +880,9 @@
     "@types/vfile-message" "*"
 
 "@xwtec/eslint-config@^3.3.1":
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/@xwtec/eslint-config/-/eslint-config-3.5.6.tgz#5f01f3ae45401f93db3b4b6231d8b754e778eae3"
-  integrity sha512-WWELA0nBmtDWpSjTQUNtkzsMn3pDmqcv32/xfWa44X/hB+LDmm6oj0UwjbAithQbNf+ZLMOGLZaIQILSzBKzyA==
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@xwtec/eslint-config/-/eslint-config-3.5.8.tgz#4f0b6a16d06271e8d947b493e0e06f99234f3586"
+  integrity sha512-4n5IRNkGMd9QwkPBrLD25yqrCipHEdtBV5eQlcoI0RWhVaWF1zzNksxJmaU4FIdwc0cyaOn9T24UDWvhuOFklg==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
     eslint-config-prettier "^4.0.0"
