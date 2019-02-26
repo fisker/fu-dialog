@@ -11,7 +11,7 @@
     "@babel/preset-env": "7.3.4",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
-    "@xwtec/eslint-config": "3.5.8",
+    "@xwtec/eslint-config": "3.5.9",
     "babel-plugin-transform-es3-member-expression-literals": "6.22.0",
     "babel-plugin-transform-es3-property-literals": "6.22.0",
     "babel-plugin-transform-es5-property-mutators": "6.24.1",
