@@ -93,7 +93,7 @@
   },
   "style": "lib/full-version/dialog.min.css",
   "unpkg": "lib/full-version/dialog.min.js",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "bugs": {
     "url": "https://github.com/fisker/fu-dialog/issues"
   },

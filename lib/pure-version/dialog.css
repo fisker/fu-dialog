@@ -1,5 +1,5 @@
 /*!
- * fu-dialog v1.0.10
+ * fu-dialog v1.0.11
  * Copyright 2019 fisker
  * Released under the MIT license
  */
