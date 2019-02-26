@@ -1,13 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 // rollup.config.js
 
 import commonjs from 'rollup-plugin-commonjs'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
-import {uglify} from 'rollup-plugin-uglify'
-import babelMinify from 'rollup-plugin-babel-minify'
 import {terser} from 'rollup-plugin-terser'
-import analyze from 'rollup-plugin-analyzer'
+// import prettier from 'rollup-plugin-prettier'
+// import analyze from 'rollup-plugin-analyzer'
 
 const buildConfig = require('./scripts/build.config')
 const builds = Object.keys(buildConfig.builds).map(format =>
@@ -30,12 +31,7 @@ function rolllupPlugins({minify}) {
     json(),
     nodeResolve(),
     babel(),
-    minify
-      ? babelMinify({
-          comments: false,
-          sourceMap: false,
-        })
-      : null,
+    minify ? terser() : null,
     // analyze(),
   ]
 }

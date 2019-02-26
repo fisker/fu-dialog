@@ -1,1 +1,15 @@
-lib/**/*.js
+# eslint ignore
+
+# also lint . files
+!.*
+
+# build file
+lib/**
+dist/**
+**/*.min.*
+
+# node_modules
+node_modules/**
+
+# fixtures
+**/fixtures/**

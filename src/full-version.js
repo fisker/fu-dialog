@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import Promise from 'es6-promise'
 import dialogPolyfill from 'dialog-polyfill'
 
