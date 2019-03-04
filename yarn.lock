@@ -3432,7 +3432,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-globby@^9.0.0:
+globby@^9.0.0, globby@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-9.1.0.tgz#e90f4d5134109e6d855abdd31bdb1b085428592e"
   integrity sha512-VtYjhHr7ncls724Of5W6Kaahz0ag7dB4G62/2HsN+xEKG6SrPzM1AJMerGxQTwJGnN9reeyxdvXbuZYpfssCvg==
@@ -7497,12 +7497,12 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-dir-deep@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-4.0.2.tgz#9e0c0d8d5439e5906e58234ccc6436ecc36be843"
-  integrity sha512-gGi6KoAxPSwdYwKVz0zcOqMGrZvoFNBN7byGYYujtmg7uIx6KFXusJ9zf03fGBxj/Hn1nR41K1X4E22OdTe1QQ==
+read-dir-deep@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-4.0.3.tgz#c638c34b9ffe8a6d92a0a8c80b47259dc792082a"
+  integrity sha512-EJEuG2afFRMsfxDD7LXt5t1sV6upfQlGRSbUdpvjsmdqKpKOivHs/64amqnAZ92IVrgfRtKyFYV82yZNf8PUiQ==
   dependencies:
-    globby "^9.0.0"
+    globby "^9.1.0"
     path-sort2 "^1.0.0"
 
 read-file-stdin@^0.2.0:
