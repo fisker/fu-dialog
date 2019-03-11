@@ -20,7 +20,7 @@
     "create-banner": "1.0.0",
     "cssnano-cli": "1.0.5",
     "cz-conventional-changelog-emoji": "^0.1.0",
-    "dialog-polyfill": "0.4.10",
+    "dialog-polyfill": "0.5.0",
     "es6-promise": "4.2.6",
     "eslint": "5.15.1",
     "gzip-size": "5.0.0",
