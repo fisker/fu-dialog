@@ -29,7 +29,7 @@
     "jsdom": "14.0.0",
     "lint-staged": "8.1.5",
     "markdownlint-cli": "^0.14.0",
-    "mem": "4.1.0",
+    "mem": "4.2.0",
     "node-sass": "4.11.0",
     "np": "4.0.2",
     "npm-run-all": "4.1.5",
