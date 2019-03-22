@@ -1,60 +1,74 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-size: 14px;
+        line-height: 1.5;
+      }
 
-  button {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-  }
-  </style>
-  <link rel="stylesheet" href="../src/styles/full-version.scss">
-</head>
-<body>
+      button {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    </style>
+    <link rel="stylesheet" href="../src/styles/full-version.scss" />
+  </head>
+  <body>
+    <div>
+      <p>data type</p>
+      <div id="js-data-types"></div>
+    </div>
 
-  <div>
-    <p>data type</p>
-    <div id="js-data-types"></div>
-  </div>
+    <hr />
 
-  <hr>
+    <p>title</p>
+    <button type="button" onclick="_.alert({title: 'custom title'})">
+      alert title
+    </button>
+    <hr />
 
+    <p>custom btn</p>
+    <button type="button" onclick="demo.customActions()">customActions</button>
+    <hr />
 
-<p>title</p>
-<button type="button" onclick="_.alert({title: 'custom title'})">alert title</button>
-<hr>
+    <p>prompt</p>
+    <button type="button" onclick="_.prompt('whats you name:')">
+      prompt input
+    </button>
+    <button
+      type="button"
+      onclick="_.prompt({message: 'introduce your self:', rows: 4})"
+    >
+      prompt textarea
+    </button>
+    <hr />
 
-<p>custom btn</p>
-<button type="button" onclick="demo.customActions()">customActions</button>
-<hr>
+    <p>callback</p>
+    <button type="button" onclick="demo.alertCallback()">alert Callback</button>
+    <button type="button" onclick="demo.alertPromise()">alert Promise</button>
+    <button type="button" onclick="demo.confirmCallback()">
+      confirm Callback
+    </button>
+    <button type="button" onclick="demo.confirmPromise()">
+      confirm Promise
+    </button>
+    <button type="button" onclick="demo.promptCallback()">
+      prompt Callback
+    </button>
+    <button type="button" onclick="demo.promptPromise()">prompt Promise</button>
 
-<p>prompt</p>
-<button type="button" onclick="_.prompt('whats you name:')">prompt input</button>
-<button type="button" onclick="_.prompt({message: 'introduce your self:', rows: 4})">prompt textarea</button>
-<hr>
+    <hr />
+    <p>prevent close</p>
+    <button type="button" onclick="demo.preventClose()">prevent close</button>
+    <button type="button" onclick="demo.preventClose2()">
+      prevent close 2
+    </button>
 
-<p>callback</p>
-<button type="button" onclick="demo.alertCallback()">alert Callback</button>
-<button type="button" onclick="demo.alertPromise()">alert Promise</button>
-<button type="button" onclick="demo.confirmCallback()">confirm Callback</button>
-<button type="button" onclick="demo.confirmPromise()">confirm Promise</button>
-<button type="button" onclick="demo.promptCallback()">prompt Callback</button>
-<button type="button" onclick="demo.promptPromise()">prompt Promise</button>
-
-<hr>
-<p>prevent close</p>
-<button type="button" onclick="demo.preventClose()">prevent close</button>
-<button type="button" onclick="demo.preventClose2()">prevent close 2</button>
-
-<script src="./demo.js"></script>
-</body>
+    <script src="./demo.js"></script>
+  </body>
 </html>
