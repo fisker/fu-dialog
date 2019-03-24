@@ -8638,10 +8638,25 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint-config-recommended-scss@3.2.0:
+stylelint-config-fisker@^0.0.3:
+  version "0.0.3"
+  resolved "http://registry.npm.taobao.org/stylelint-config-fisker/download/stylelint-config-fisker-0.0.3.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-config-fisker%2Fdownload%2Fstylelint-config-fisker-0.0.3.tgz#6c90826e9ac4bad9bdd855408f9b9dc39b7b9283"
+  integrity sha1-bJCCbprEutm92FVAj5udw5t7koM=
+  dependencies:
+    stylelint-config-prettier "^5.0.0"
+    stylelint-config-recommended-scss "^3.2.0"
+    stylelint-config-standard "^18.2.0"
+    stylelint-scss "^3.5.4"
+
+stylelint-config-prettier@^5.0.0:
+  version "5.0.0"
+  resolved "http://registry.npm.taobao.org/stylelint-config-prettier/download/stylelint-config-prettier-5.0.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-config-prettier%2Fdownload%2Fstylelint-config-prettier-5.0.0.tgz#e7339da065dac8129ca821e234abddcef950b7f8"
+  integrity sha1-5zOdoGXayBKcqCHiNKvdzvlQt/g=
+
+stylelint-config-recommended-scss@^3.2.0:
   version "3.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-3.2.0.tgz#5761be65e28b58fa6a4a628b71291e83e921d10f"
-  integrity sha512-M8BFHMRf8KNz5EQPKJd8nMCGmBd2o5coDEObfHVbEkyLDgjIf1V+U5dHjaGgvhm0zToUxshxN+Gc5wpbOOew4g==
+  resolved "http://registry.npm.taobao.org/stylelint-config-recommended-scss/download/stylelint-config-recommended-scss-3.2.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-config-recommended-scss%2Fdownload%2Fstylelint-config-recommended-scss-3.2.0.tgz#5761be65e28b58fa6a4a628b71291e83e921d10f"
+  integrity sha1-V2G+ZeKLWPpqSmKLcSkeg+kh0Q8=
   dependencies:
     stylelint-config-recommended "^2.0.0"
 
@@ -8650,17 +8665,17 @@ stylelint-config-recommended@^2.0.0, stylelint-config-recommended@^2.1.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-2.1.0.tgz#f526d5c771c6811186d9eaedbed02195fee30858"
   integrity sha512-ajMbivOD7JxdsnlS5945KYhvt7L/HwN6YeYF2BH6kE4UCLJR0YvXMf+2j7nQpJyYLZx9uZzU5G1ZOSBiWAc6yA==
 
-stylelint-config-standard@18.2.0:
+stylelint-config-standard@^18.2.0:
   version "18.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-18.2.0.tgz#6283149aba7f64f18731aef8f0abfb35cf619e06"
-  integrity sha512-07x0TaSIzvXlbOioUU4ORkCIM07kyIuojkbSVCyFWNVgXMXYHfhnQSCkqu+oHWJf3YADAnPGWzdJ53NxkoJ7RA==
+  resolved "http://registry.npm.taobao.org/stylelint-config-standard/download/stylelint-config-standard-18.2.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-config-standard%2Fdownload%2Fstylelint-config-standard-18.2.0.tgz#6283149aba7f64f18731aef8f0abfb35cf619e06"
+  integrity sha1-YoMUmrp/ZPGHMa748Kv7Nc9hngY=
   dependencies:
     stylelint-config-recommended "^2.1.0"
 
-stylelint-scss@3.5.4:
+stylelint-scss@^3.5.4:
   version "3.5.4"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-3.5.4.tgz#ff3ee989ac48f5c4f57313523b5ace059ffd6cc2"
-  integrity sha512-hEdEOfFXVqxWcUbenBONW/cAw5cJcEDasY8tGwKNAAn1GDHoZO1ATdWpr+iIk325mPGIQqVb1sUxsRxuL70trw==
+  resolved "http://registry.npm.taobao.org/stylelint-scss/download/stylelint-scss-3.5.4.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-scss%2Fdownload%2Fstylelint-scss-3.5.4.tgz#ff3ee989ac48f5c4f57313523b5ace059ffd6cc2"
+  integrity sha1-/z7piaxI9cT1cxNSO1rOBZ/9bMI=
   dependencies:
     lodash "^4.17.11"
     postcss-media-query-parser "^0.2.3"
