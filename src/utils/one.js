@@ -2,7 +2,7 @@ function one(fn) {
   let called = false
   return function(...args) {
     if (called) {
-      return
+      return null
     }
 
     called = true

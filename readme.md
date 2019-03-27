@@ -46,22 +46,22 @@ in browser
 />
 <!-- module -->
 <script type="module">
-  import fd from 'https://unpkg.com/fu-dialog?module'
-  fd.alert('fu-dialog(module) loaded.')
+  import fd from "https://unpkg.com/fu-dialog?module"
+  fd.alert("fu-dialog(module) loaded.")
 </script>
 <!-- no module -->
 <script src="https://unpkg.com/fu-dialog" nomodule></script>
 <script nomodule>
-  fd.alert('fu-dialog(no module) loaded.')
+  fd.alert("fu-dialog(no module) loaded.")
 </script>
 ```
 
 ## ustage`
 
 ```js
-import fd from 'fu-dialog'
+import fd from "fu-dialog"
 
-fd.alert('fu-dialog')
+fd.alert("fu-dialog")
 ```
 
 ### fd.Dialog
@@ -125,11 +125,11 @@ fd.prompt(options[, onAction])
   - extra `dialog` is attached to `Promise`
 
 ```js
-fd.alert('test', () => {
+fd.alert("test", () => {
   // 1. dialog confirm button is clicked
   // 2. dialog closeBtn is clicked, when `option.closeBtn` is truly
   // 3. `esc` key is pressed, when `option.preventCancel` is falsly
-  console.log('on action.')
+  console.log("on action.")
 
   // this is `fd.Dialog` instance
   // so you can use `this.remove()` to remove dialog
@@ -144,19 +144,19 @@ fd.alert('test', () => {
 })
 
 // dialog is attached to promise
-const {dialog} = fd.alert('test')
+const {dialog} = fd.alert("test")
 
-fd.confirm('test', result => {
+fd.confirm("test", result => {
   // result is true, when confirm button is clicked
   // result is false, when cancel button is clicked
   // result is false, when closeBtn is clicked
   // result is false, `esc` key is pressed
-  console.log('result', result)
+  console.log("result", result)
 }).then(result => {
   // result same as above
 })
 
-fd.prompt('test', result => {
+fd.prompt("test", result => {
   // result is String(input.value), when confirm button is clicked
   // result is undefined, when cancel button is clicked
   // result is undefined, when closeBtn is clicked
@@ -177,7 +177,7 @@ why not reject promise
   let result = false
 
   try {
-    result = await fd.confirm('are you sure?')
+    result = await fd.confirm("are you sure?")
   } catch (err) {}
 
   console.log(result)
@@ -185,7 +185,7 @@ why not reject promise
 
 // much esaier
 ;(async () => {
-  let result = await fd.confirm('are you sure?')
+  let result = await fd.confirm("are you sure?")
 
   console.log(result)
 })()
@@ -217,13 +217,13 @@ example
 
 ```js
 fd.dialog({
-  message: 'dialog message',
+  message: "dialog message",
   actions: [
     // only text
-    fd.action('a custom button'),
+    fd.action("a custom button"),
     // only action
-    fd.action('a custom button with action', function() {
-      console.log('a custom action')
+    fd.action("a custom button with action", function() {
+      console.log("a custom action")
     }),
   ],
 })
@@ -243,33 +243,33 @@ example
 
 ```js
 fd.dialog({
-  message: 'dialog message',
+  message: "dialog message",
   actions: [
     // default confirm button
     fd.action.confirm,
     // default confirm button
     fd.action.confirm(),
     // only text
-    fd.action.confirm('a custom confirm'),
+    fd.action.confirm("a custom confirm"),
     // only action
     fd.action.confirm(function() {
-      console.log('a custom confirm action')
+      console.log("a custom confirm action")
     }),
   ],
 })
 
 fd.dialog({
-  message: 'dialog message',
+  message: "dialog message",
   actions: [
     // default cancel button
     fd.action.cancel,
     // default cancel button
     fd.action.cancel(),
     // only text
-    fd.action.cancel('a custom cancel'),
+    fd.action.cancel("a custom cancel"),
     // only action
     fd.action.cancel(function() {
-      console.log('a custom cancel action')
+      console.log("a custom cancel action")
     }),
   ],
 })

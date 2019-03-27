@@ -97,7 +97,7 @@ class Dialog {
     }
 
     // foot
-    if (actions.length) {
+    if (actions.length !== 0) {
       const foot = createElement(container, 'div', classNames.FOOT)
       this.foot = foot
 

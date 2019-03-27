@@ -13,7 +13,7 @@ function parseDomProps(props = {}) {
 
   const classList = parseClassNames(props.className)
 
-  if (classList.length) {
+  if (classList.length !== 0) {
     props.className = classList.join(' ')
   } else {
     delete props.className

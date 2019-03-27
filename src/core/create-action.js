@@ -4,7 +4,7 @@ import returnFalse from '../utils/return-false'
 import returnTrue from '../utils/return-true'
 import parseClassNames from '../dom/parse-classnames'
 import createElement from '../dom/create-element'
-import * as classNames from './classnames.js'
+import * as classNames from './classnames'
 import defaults from './defaults'
 
 function createAction(actionText, props, action = noop) {

@@ -1,6 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Promise from 'es6-promise'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import dialogPolyfill from 'dialog-polyfill'
 
 import env from './core/env'
