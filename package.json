@@ -54,7 +54,7 @@
     "table": "5.2.3",
     "uglify-js": "3.5.2",
     "write-pkg": "3.2.0",
-    "yarn": "1.13.0"
+    "yarn": "1.15.2"
   },
   "files": ["lib", "src", "package.json", "LICENSE", "README.md"],
   "jsdelivr": "lib/full-version/dialog.min.js",
