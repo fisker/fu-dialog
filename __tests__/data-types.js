@@ -23,8 +23,8 @@ const libSource = fs.readFileSync(require.resolve(`../${pkg.browser}`), 'UTF-8')
 
 beforeEach(() => {
   const dom = new JSDOM('', {runScripts: 'outside-only'})
-  window = dom.window
-  window.eval(libSource)
+  global.window = dom.window
+  dom.window.eval(libSource)
   delete window.HTMLDialogElement
 })
 

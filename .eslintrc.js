@@ -16,9 +16,20 @@ module.exports = {
   plugins: [],
   overrides: [
     {
+      files: ['demo/**/*.js'],
+      env: {
+        browser: true,
+      },
+      rules: {
+        'no-alert': 'off',
+        'no-console': 'off',
+      },
+    },
+    {
       files: ['__tests__/**/*.js'],
       env: {
         jest: true,
+        browser: true,
       },
     },
   ],

@@ -26,8 +26,8 @@ function createTestBtn(text, props = {}, onClick = noop) {
   return el
 }
 
-var container = document.getElementById('js-data-types')
-var dataTypes = [
+const container = document.getElementById('js-data-types')
+const dataTypes = [
   undefined,
   null,
   123,
@@ -51,18 +51,18 @@ forEach.call(dataTypes, value => {
 
 function customActions() {
   function createActionBtn(tagName, props) {
-    var el = createElement(tagName, props)
+    const el = createElement(tagName, props)
     el.className = 'f-dialog__action'
     return el
   }
 
-  var dialog = _.dialog({
+  const dialog = _.dialog({
     message: '自定义确定按钮',
     actions: [
       '按钮文字',
       {
         text: '按钮Object',
-        action: function() {
+        action() {
           console.log(this)
         },
       },
@@ -77,7 +77,7 @@ function customActions() {
         }),
       },
       {
-        el: function() {
+        el() {
           return createActionBtn('button', {
             textContent: 'el: 函数',
           })

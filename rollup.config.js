@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 // rollup.config.js
 
 import commonjs from 'rollup-plugin-commonjs'
@@ -11,6 +9,7 @@ import {terser} from 'rollup-plugin-terser'
 // import analyze from 'rollup-plugin-analyzer'
 
 const buildConfig = require('./scripts/build.config')
+
 const builds = Object.keys(buildConfig.builds).map(format =>
   Object.assign(
     {
