@@ -8,22 +8,22 @@ import addListener from '../src/dom/add-listener'
 import createElement from '../src/dom/create-element'
 import _ from '../src/full-version'
 
-function createTestBtn(text, props = {}, onClick = noop) {
-  if (typeof props === 'function') {
-    onClick = props || noop
-    props = {}
+function createTestButton(text, properties = {}, onClick = noop) {
+  if (typeof properties === 'function') {
+    onClick = properties || noop
+    properties = {}
   }
 
-  props = assign(
+  properties = assign(
     {
       textContent: text,
     },
-    props
+    properties
   )
 
-  const el = createElement('button', props)
-  addListener(el, onClick)
-  return el
+  const element = createElement('button', properties)
+  addListener(element, onClick)
+  return element
 }
 
 const container = document.getElementById('js-data-types')
@@ -42,18 +42,18 @@ const dataTypes = [
   /regexp/,
 ]
 forEach.call(dataTypes, value => {
-  const btn = createTestBtn(`${getType(value)}: ${String(value)}`)
-  addListener(btn, 'click', function() {
+  const button = createTestButton(`${getType(value)}: ${String(value)}`)
+  addListener(button, 'click', function() {
     _.alert(value)
   })
-  container.appendChild(btn)
+  container.appendChild(button)
 })
 
 function customActions() {
-  function createActionBtn(tagName, props) {
-    const el = createElement(tagName, props)
-    el.className = 'f-dialog__action'
-    return el
+  function createActionButton(tagName, properties) {
+    const element = createElement(tagName, properties)
+    element.className = 'f-dialog__action'
+    return element
   }
 
   const dialog = _.dialog({
@@ -66,11 +66,11 @@ function customActions() {
           console.log(this)
         },
       },
-      createActionBtn('button', {
+      createActionButton('button', {
         textContent: 'HTML元素',
       }),
       {
-        el: createActionBtn('a', {
+        el: createActionButton('a', {
           textContent: 'el: HTML元素',
           href: globalThis.location.href,
           target: '_blank',
@@ -78,7 +78,7 @@ function customActions() {
       },
       {
         el() {
-          return createActionBtn('button', {
+          return createActionButton('button', {
             textContent: 'el: 函数',
           })
         },
