@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      button {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    </style>
+    <link rel="stylesheet" href="/full-version.efb85911.css" />
+  </head>
+  <body>
+    <div>
+      <p>data type</p>
+      <div id="js-data-types"></div>
+    </div>
+    <hr />
+    <p>title</p>
+    <button type="button" onclick="_.alert({title: 'custom title'})">
+      alert title
+    </button>
+    <hr />
+    <p>custom btn</p>
+    <button type="button" onclick="demo.customActions()">customActions</button>
+    <hr />
+    <p>prompt</p>
+    <button type="button" onclick="_.prompt('whats you name:')">
+      prompt input
+    </button>
+    <button
+      type="button"
+      onclick="_.prompt({message: 'introduce your self:', rows: 4})"
+    >
+      prompt textarea
+    </button>
+    <hr />
+    <p>callback</p>
+    <button type="button" onclick="demo.alertCallback()">alert Callback</button>
+    <button type="button" onclick="demo.alertPromise()">alert Promise</button>
+    <button type="button" onclick="demo.confirmCallback()">
+      confirm Callback
+    </button>
+    <button type="button" onclick="demo.confirmPromise()">
+      confirm Promise
+    </button>
+    <button type="button" onclick="demo.promptCallback()">
+      prompt Callback
+    </button>
+    <button type="button" onclick="demo.promptPromise()">prompt Promise</button>
+    <hr />
+    <p>prevent close</p>
+    <button type="button" onclick="demo.preventClose()">prevent close</button>
+    <button type="button" onclick="demo.preventClose2()">
+      prevent close 2
+    </button>
+    <script src="/demo.b9db01ab.js"></script>
+  </body>
+</html>
