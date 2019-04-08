@@ -47,7 +47,7 @@
     "rollup-plugin-node-resolve": "4.2.1",
     "rollup-plugin-prettier": "^0.6.0",
     "rollup-plugin-terser": "4.0.4",
-    "sass": "^1.17.4",
+    "sass": "^1.18.0",
     "stylelint": "9.10.1",
     "stylelint-config-fisker": "^0.0.4",
     "table": "5.2.3",
