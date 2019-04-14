@@ -22,3 +22,5 @@ dist/**
 **/fixtures/**
 
 # project glob
+docs/**
+demo/**

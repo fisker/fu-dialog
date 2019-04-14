@@ -1,9 +1,9 @@
 import noop from '../utils/noop'
-import env from './env'
+import environment from './env'
 
 function shortcutWrapper(method) {
   return function shortcutWrapper(options, onAction = noop) {
-    const {Promise} = env
+    const {Promise} = environment
     let dialog
 
     if (Promise) {

@@ -1,7 +1,7 @@
 import addListener from '../dom/add-listener'
 
-function renderAction(container, btn, dialog) {
-  const {el, action} = btn
+function renderAction(container, button, dialog) {
+  const {el, action} = button
 
   addListener(el, 'click', function() {
     let result

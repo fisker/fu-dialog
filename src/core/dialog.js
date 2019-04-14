@@ -8,11 +8,11 @@ import preventEvent from '../dom/prevent-event'
 import parseDialogOptions from './parse-options'
 import parseAction from './parse-action'
 import renderAction from './render-action'
-import env from './env'
+import environment from './env'
 import forEach from '../utils/for-each'
 
 function registerDialog(dialog) {
-  const {dialogPolyfill = {}} = env
+  const {dialogPolyfill = {}} = environment
   const {registerDialog} = dialogPolyfill
 
   if (registerDialog) {

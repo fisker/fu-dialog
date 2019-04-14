@@ -21,7 +21,7 @@ function parseListener(listener) {
   return listener
 }
 
-function addListener(el, type, listener, options = false) {
+function addListener(element, type, listener, options = false) {
   if (isListener(type)) {
     options = listener || false
     listener = type
@@ -30,8 +30,8 @@ function addListener(el, type, listener, options = false) {
 
   listener = parseListener(listener)
 
-  el.addEventListener(type, listener, options)
-  return el
+  element.addEventListener(type, listener, options)
+  return element
 }
 
 export default addListener

@@ -3,7 +3,7 @@ import path from 'path'
 import {JSDOM} from 'jsdom'
 import getType from '../src/utils/get-type'
 import buildConfig from '../scripts/build.config'
-import pkg from '../package.json'
+import package_ from '../package.json'
 
 const testData = [
   undefined,
@@ -19,12 +19,15 @@ const testData = [
   /regexp/,
 ]
 
-const libSource = fs.readFileSync(require.resolve(`../${pkg.browser}`), 'UTF-8')
+const librarySource = fs.readFileSync(
+  require.resolve(`../${package_.browser}`),
+  'UTF-8'
+)
 
 beforeEach(() => {
   const dom = new JSDOM('', {runScripts: 'outside-only'})
   global.window = dom.window
-  dom.window.eval(libSource)
+  dom.window.eval(librarySource)
   delete window.HTMLDialogElement
 })
 

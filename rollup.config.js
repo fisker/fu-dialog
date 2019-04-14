@@ -6,7 +6,7 @@ import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
 import {terser} from 'rollup-plugin-terser'
 // import prettier from 'rollup-plugin-prettier'
-// import analyze from 'rollup-plugin-analyzer'
+import filesize from 'rollup-plugin-filesize'
 
 const buildConfig = require('./scripts/build.config')
 
@@ -31,7 +31,7 @@ function rolllupPlugins({minify}) {
     nodeResolve(),
     babel(),
     minify ? terser() : null,
-    // analyze(),
+    filesize(),
   ]
 }
 

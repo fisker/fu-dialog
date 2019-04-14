@@ -4,30 +4,31 @@ import assign from '../utils/assign'
 import {SUPPORTS_TEXT_CONTENT} from './supports'
 import parseClassNames from './parse-classnames'
 
-function parseDomProps(props = {}) {
-  if (isArray(props) || typeof props === 'string') {
-    props = {
-      className: props,
+function parseDomProperties(properties = {}) {
+  if (isArray(properties) || typeof properties === 'string') {
+    properties = {
+      className: properties,
     }
   }
 
-  const classList = parseClassNames(props.className)
+  const classList = parseClassNames(properties.className)
 
   if (classList.length !== 0) {
-    props.className = classList.join(' ')
+    properties.className = classList.join(' ')
   } else {
-    delete props.className
+    delete properties.className
   }
 
-  if (!SUPPORTS_TEXT_CONTENT && 'textContent' in props) {
-    props.innerText = props.textContent
-    delete props.textContent
+  if (!SUPPORTS_TEXT_CONTENT && 'textContent' in properties) {
+    // eslint-disable-next-line unicorn/prefer-text-content
+    properties.innerText = properties.textContent
+    delete properties.textContent
   }
 
-  return props
+  return properties
 }
 
-const defaultDomProps = {
+const defaultDomProperties = {
   button: {
     type: 'button',
   },
@@ -36,34 +37,34 @@ const defaultDomProps = {
   },
 }
 
-function setDefaultProps(props, tagName) {
-  const defaultProps = defaultDomProps[tagName]
+function setDefaultProperties(properties, tagName) {
+  const defaultProps = defaultDomProperties[tagName]
 
   if (defaultProps) {
-    props = assign({}, defaultProps, props)
+    properties = assign({}, defaultProps, properties)
   }
 
-  return props
+  return properties
 }
 
-function createElement(parentNode, tagName, props = {}) {
+function createElement(parentNode, tagName, properties = {}) {
   if (typeof parentNode === 'string') {
-    props = tagName
+    properties = tagName
     tagName = parentNode
     parentNode = null
   }
 
-  const el = document.createElement(tagName)
-  props = parseDomProps(props)
-  props = setDefaultProps(props, tagName)
+  const element = document.createElement(tagName)
+  properties = parseDomProperties(properties)
+  properties = setDefaultProperties(properties, tagName)
 
-  assign(el, props)
+  assign(element, properties)
 
   if (parentNode) {
-    parentNode.appendChild(el)
+    parentNode.appendChild(element)
   }
 
-  return el
+  return element
 }
 
 export default createElement

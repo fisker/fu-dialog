@@ -12,9 +12,9 @@ function alert(options, onAction = noop) {
   options = parseDialogOptions(options)
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onAction)
+    const confirmButton = createConfirmAction(onAction)
 
-    options.actions = [confirmBtn]
+    options.actions = [confirmButton]
   }
 
   options.onClose = onAction
@@ -38,13 +38,13 @@ function confirm(options, onAction = noop) {
   }
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onConfirm)
-    const cancelBtn = createCancelAction(onCancel)
+    const confirmButton = createConfirmAction(onConfirm)
+    const cancelButton = createCancelAction(onCancel)
 
     if (defaults.reverseActions) {
-      options.actions = [cancelBtn, confirmBtn]
+      options.actions = [cancelButton, confirmButton]
     } else {
-      options.actions = [confirmBtn, cancelBtn]
+      options.actions = [confirmButton, cancelButton]
     }
   }
 
@@ -93,14 +93,14 @@ function prompt(options, onAction = noop) {
   }
 
   if (!options.actions) {
-    const confirmBtn = createConfirmAction(onConfirm)
+    const confirmButton = createConfirmAction(onConfirm)
 
-    const cancelBtn = createCancelAction(onCancel)
+    const cancelButton = createCancelAction(onCancel)
 
     if (defaults.reverseActions) {
-      options.actions = [cancelBtn, confirmBtn]
+      options.actions = [cancelButton, confirmButton]
     } else {
-      options.actions = [confirmBtn, cancelBtn]
+      options.actions = [confirmButton, cancelButton]
     }
   }
 

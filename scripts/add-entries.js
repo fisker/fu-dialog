@@ -1,7 +1,7 @@
 const path = require('path')
-const writePkg = require('write-pkg').sync
+const writePackage = require('write-pkg').sync
 const mem = require('mem')
-const pkg = require('../package.json')
+const package_ = require('../package.json')
 const buildConfig = require('./build.config')
 
 const getEntryByFormat = mem(function getEntryByFormat(format) {
@@ -36,10 +36,10 @@ Object.keys(entries)
   }))
   .forEach(({entry, format}) => {
     if (format) {
-      pkg[entry] = getEntryByFormat(format)
+      package_[entry] = getEntryByFormat(format)
     } else {
-      delete pkg[entry]
+      delete package_[entry]
     }
   })
 
-writePkg(path.join(__dirname, '../package.json'), pkg)
+writePackage(path.join(__dirname, '../package.json'), package_)

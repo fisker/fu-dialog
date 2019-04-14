@@ -5,7 +5,7 @@ const buildConfig = require('./build.config')
 // const scss2less = require('less-plugin-sass2less/lib/')
 
 const distFolder = path.join(__dirname, '..', buildConfig.dist, 'styles')
-const srcFolder = path.join(__dirname, '..', buildConfig.src, 'styles')
+const sourceFolder = path.join(__dirname, '..', buildConfig.src, 'styles')
 
 cpFile.sync(
   require.resolve('dialog-polyfill/dialog-polyfill.css'),
@@ -18,7 +18,7 @@ cpFile.sync(
 // )
 
 copyScss(
-  path.join(srcFolder, '_dialog.scss'),
+  path.join(sourceFolder, '_dialog.scss'),
   path.join(distFolder, 'scss/_dialog.scss')
 )
 

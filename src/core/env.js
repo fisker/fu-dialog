@@ -1,14 +1,14 @@
-const env = {}
+const environment = {}
 
 function setEnvironment({Promise, dialogPolyfill}) {
   if (Promise) {
-    env.Promise = Promise
+    environment.Promise = Promise
   }
 
   if (dialogPolyfill) {
-    env.dialogPolyfill = dialogPolyfill
+    environment.dialogPolyfill = dialogPolyfill
   }
 }
 
 export {setEnvironment}
-export default env
+export default environment

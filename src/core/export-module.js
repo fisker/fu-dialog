@@ -7,7 +7,7 @@ import createAction, {
   createConfirmAction,
   createCancelAction,
 } from './create-action'
-import env, {setEnvironment} from './env'
+import environment, {setEnvironment} from './env'
 
 function exportModule() {
   function dialog(options) {
@@ -15,7 +15,7 @@ function exportModule() {
   }
 
   assign(dialog, {
-    env,
+    env: environment,
     setEnvironment,
     defaults,
     setDefaults,

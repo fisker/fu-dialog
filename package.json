@@ -5,6 +5,11 @@
     "url": "https://www.fiskercheung.com/"
   },
   "browser": "lib/full-version/dialog.min.js",
+  "style": "lib/full-version/dialog.min.css",
+  "unpkg": "lib/full-version/dialog.min.js",
+  "main": "lib/full-version/dialog.common.js",
+  "module": "lib/full-version/dialog.esm.min.mjs",
+  "umd:main": "lib/full-version/dialog.min.js",
   "description": "fisker's dialog",
   "devDependencies": {
     "@babel/core": "7.4.3",
@@ -40,10 +45,11 @@
     "prettier-config-fisker": "^1.0.1",
     "pretty-bytes": "5.1.0",
     "read-dir-deep": "4.0.3",
+    "rimraf": "^2.6.3",
     "rollup": "1.10.0",
-    "rollup-plugin-analyzer": "3.0.0",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-filesize": "^6.0.1",
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "4.2.3",
     "rollup-plugin-prettier": "^0.6.0",
@@ -60,8 +66,6 @@
   "jsdelivr": "lib/full-version/dialog.min.js",
   "keywords": ["dialog", "alert", "confirm", "prompt", "promise"],
   "license": "MIT",
-  "main": "lib/full-version/dialog.common.js",
-  "module": "lib/full-version/dialog.esm.min.mjs",
   "name": "fu-dialog",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -71,32 +75,29 @@
     "url": "git+https://github.com/fisker/fu-dialog.git"
   },
   "scripts": {
-    "build": "npm-run-all --parallel build:*",
+    "build": "run-p build:*",
     "build:css": "bash ./scripts/build-css.sh",
     "build:js": "bash ./scripts/build-js.sh",
     "build:package": "bash ./scripts/build-package.sh",
     "build:styles": "bash ./scripts/build-styles-source.sh",
     "build:docs": "parcel build demo/index.html --out-dir docs",
-    "clean": "bash ./scripts/clean.sh",
+    "clean": "rimraf lib",
     "dev": "parcel demo/index.html --open",
-    "dist": "npm-run-all --parallel dist:*",
-    "dist:npm": "np --no-yarn --no-cleanup",
-    "lint": "npm-run-all --parallel lint:*",
-    "lint:js": "eslint src/**/*.js",
-    "lint:scss": "stylelint src/**/*.scss",
-    "info": "node ./scripts/filesize.js",
-    "release": "npm-run-all --sequential lint clean build info test dist",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "lint": "run-p lint:*",
+    "lint:style": "stylelint **/*.{css,scss,less} --fix",
+    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:markdown": "markdownlint **/*.md --ignore \"node_modules/**\"",
+    "release": "run-s clean lint build test prettier dist",
     "test": "jest",
-    "version": "npm-run-all --parallel build && git add lib",
-    "gzip-size": "^5.0.0"
+    "version": "yarn build && git add lib",
+    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
-  "style": "lib/full-version/dialog.min.css",
-  "unpkg": "lib/full-version/dialog.min.js",
   "version": "1.0.11",
   "bugs": {
     "url": "https://github.com/fisker/fu-dialog/issues"
   },
-  "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/fisker/fu-dialog#readme",
   "config": {
     "commitizen": {

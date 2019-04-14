@@ -7,10 +7,10 @@ import createElement from '../dom/create-element'
 import * as classNames from './classnames'
 import defaults from './defaults'
 
-function createAction(actionText, props, action = noop) {
-  if (typeof props === 'function') {
-    action = props
-    props = {}
+function createAction(actionText, properties, action = noop) {
+  if (typeof properties === 'function') {
+    action = properties
+    properties = {}
   }
 
   if (action === false) {
@@ -21,21 +21,21 @@ function createAction(actionText, props, action = noop) {
     action = returnTrue
   }
 
-  props = assign(
+  properties = assign(
     {
       textContent: String(actionText),
     },
-    props
+    properties
   )
 
-  const classList = parseClassNames(props.className)
+  const classList = parseClassNames(properties.className)
   classList.unshift(classNames.ACTION)
-  props.className = classList
+  properties.className = classList
 
-  const el = createElement('button', props)
+  const element = createElement('button', properties)
 
   return {
-    el,
+    el: element,
     action,
   }
 }

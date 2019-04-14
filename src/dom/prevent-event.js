@@ -1,12 +1,12 @@
 import addListener from './add-listener'
 
-function preventDefault(e) {
-  e.preventDefault()
+function preventDefault(event) {
+  event.preventDefault()
   return false
 }
 
-function preventEvent(el, type) {
-  return addListener(el, type, preventDefault)
+function preventEvent(element, type) {
+  return addListener(element, type, preventDefault)
 }
 
 export default preventEvent

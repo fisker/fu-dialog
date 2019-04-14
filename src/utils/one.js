@@ -1,13 +1,13 @@
 function one(fn) {
   let called = false
-  return function(...args) {
+  return function(...arguments_) {
     if (called) {
       return null
     }
 
     called = true
 
-    return fn.apply(this, args)
+    return fn.apply(this, arguments_)
   }
 }
 

@@ -1,11 +1,11 @@
 const createBanner = require('create-banner')
-const pkg = require('../package.json')
+const package_ = require('../package.json')
 
-const {version} = pkg
+const {version} = package_
 
-const ns = pkg.name
+const ns = package_.name
 
-const libName = 'fd'
+const libraryName = 'fd'
 const fileName = 'dialog'
 
 const banner = {
@@ -18,7 +18,7 @@ const banner = {
 }
 
 const dist = 'lib'
-const src = 'src'
+const source = 'src'
 
 const builds = {
   cjs: {
@@ -60,10 +60,10 @@ const versions = [
 
 module.exports = {
   ns,
-  libName,
+  libName: libraryName,
   fileName,
   dist,
-  src,
+  src: source,
   version,
   banner,
   builds,
