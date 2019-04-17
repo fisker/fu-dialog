@@ -55,7 +55,7 @@
     "rollup-plugin-prettier": "^0.6.0",
     "rollup-plugin-terser": "4.0.4",
     "sass": "^1.18.0",
-    "stylelint": "10.0.0",
+    "stylelint": "10.0.1",
     "stylelint-config-fisker": "^0.0.5",
     "table": "5.2.3",
     "uglify-js": "3.5.4",
