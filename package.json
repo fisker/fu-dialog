@@ -58,7 +58,7 @@
     "stylelint": "10.0.1",
     "stylelint-config-fisker": "^0.0.5",
     "table": "5.2.3",
-    "uglify-js": "3.5.4",
+    "uglify-js": "3.5.5",
     "write-pkg": "3.2.0",
     "yarn": "1.15.2"
   },
