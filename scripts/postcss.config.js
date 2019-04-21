@@ -1,21 +1,18 @@
+const postcssConfig = require('@fisker/postcss-config')
 const buildConfig = require('./build.config')
 
 module.exports = context => {
   const IS_MINIFY = context.env === 'MINIFY'
   const banner = buildConfig.banner[IS_MINIFY ? 'mini' : 'full']
-  const map = !IS_MINIFY
 
   return {
-    map,
+    map: true,
     plugins: {
       'postcss-preset-env': {
-        stage: 3,
-        features: {
-          'nesting-rules': true,
-        },
+        stage: 0,
       },
-      'postcss-cssnext': {
-        warnForDuplicates: false,
+      'postcss-pseudo-element-colons': {
+        'colon-notation': 'single',
       },
       cssnano: IS_MINIFY ? {} : false,
       'postcss-header': {
