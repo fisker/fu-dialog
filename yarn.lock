@@ -799,10 +799,10 @@
   dependencies:
     "@fisker/eslint-config" "^1.0.5"
 
-"@fisker/postcss-config@^1.0.1":
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/@fisker/postcss-config/download/@fisker/postcss-config-1.0.1.tgz#b86c609df7a27d7535dfb9b41c2a4db0f659816a"
-  integrity sha1-uGxgnfeifXU137m0HCpNsPZZgWo=
+"@fisker/postcss-config@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@fisker/postcss-config/-/postcss-config-1.0.3.tgz#5cef26c77c8688756dda00cbbd6627dfa7a08fca"
+  integrity sha512-U04dEEWLaL287/VKbg9H55g54uKSpIRzTyVz+87k/P3Xb7x4oJ6c/2lGaWuFwJ3Cg3Q6NccfyWNKkwwMgcDmAA==
   dependencies:
     postcss-preset-env "^6.6.0"
 
