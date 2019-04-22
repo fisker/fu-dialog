@@ -7127,10 +7127,10 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-dir-deep@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-4.0.3.tgz#c638c34b9ffe8a6d92a0a8c80b47259dc792082a"
-  integrity sha512-EJEuG2afFRMsfxDD7LXt5t1sV6upfQlGRSbUdpvjsmdqKpKOivHs/64amqnAZ92IVrgfRtKyFYV82yZNf8PUiQ==
+read-dir-deep@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-4.0.4.tgz#13de088dac4aeccb3c50abf5b70e0dc1447591c4"
+  integrity sha512-uIiwCfZ1x5smAaYmGee3SVoiQeGQngdvOXfv17LMDlzcduwLNURtClimy2329DHJh5Vecu1eACQkpQOTmnCcJw==
   dependencies:
     globby "^9.1.0"
     path-sort2 "^1.0.0"
