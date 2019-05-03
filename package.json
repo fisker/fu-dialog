@@ -57,7 +57,7 @@
     "rollup-plugin-node-resolve": "4.2.3",
     "rollup-plugin-prettier": "^0.6.0",
     "rollup-plugin-terser": "4.0.4",
-    "sass": "^1.19.0",
+    "sass": "^1.20.1",
     "stylelint": "10.0.1",
     "table": "5.2.3",
     "uglify-js": "3.5.10",
