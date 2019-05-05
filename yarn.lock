@@ -847,15 +847,15 @@
   resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.12.tgz#161be5931cc4ec659371c1a56340d7113c525008"
   integrity sha512-HSGkDUkhmHYgBN2k6qNcZ9Ey/OBOTPLZOblLutGNP0uwoTj5WjBSQu5qyl/P2LOr7R8iNOz8XQ9AeBRv7Pw9lw==
 
-"@fisker/stylelint-config@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@fisker/stylelint-config/-/stylelint-config-1.0.5.tgz#af34702c535a1fe1ccf9443556e032023fbff25d"
-  integrity sha512-VYvv/gxOWL1PM1cPEIe5R0hqCuBBaILST+A6yGF3LKu3/fBHGT63sDe0/5b1/EHo4EeyI0D9bG9NrUQj6PqUbg==
+"@fisker/stylelint-config@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@fisker/stylelint-config/-/stylelint-config-1.0.6.tgz#76ccf6c63294fad0fe389ed0ea6f35df49916464"
+  integrity sha512-fpm0g2bqdAm6Uvkvu/I6YqNvPFYSPhUWzZcKXDVB0yrhUa2EytrzVsi00qnjqsq8E7utz71XZQXVwjVMTYUcFA==
   dependencies:
     stylelint-config-prettier "^5.1.0"
     stylelint-config-recommended-scss "^3.3.0"
     stylelint-config-standard "^18.3.0"
-    stylelint-scss "^3.6.0"
+    stylelint-scss "^3.6.1"
 
 "@jest/console@^24.7.1":
   version "24.7.1"
@@ -8262,10 +8262,10 @@ stylelint-config-standard@^18.3.0:
   dependencies:
     stylelint-config-recommended "^2.2.0"
 
-stylelint-scss@^3.6.0:
-  version "3.6.0"
-  resolved "http://registry.npm.taobao.org/stylelint-scss/download/stylelint-scss-3.6.0.tgz#5fafe815b68119965f7aa75f0cfc1b04ae4021bd"
-  integrity sha1-X6/oFbaBGZZfeqdfDPwbBK5AIb0=
+stylelint-scss@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-3.6.1.tgz#eef14df2b6314cbd20d240b72d5b97c40751fef5"
+  integrity sha512-6bB2EHUZsE/bDVKUdzBXqOcfgXmg3zq9Lglgbu16EqMa4PM8Y48XKcB8coOj8CKr07GtlqtOdCNA2E5njoI9Kw==
   dependencies:
     lodash "^4.17.11"
     postcss-media-query-parser "^0.2.3"
