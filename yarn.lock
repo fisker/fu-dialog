@@ -805,10 +805,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fisker/commitlint-config@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@fisker/commitlint-config/-/commitlint-config-1.0.5.tgz#656f9588db3075ff00d07f472774ce56abbb9d56"
-  integrity sha512-XgbIQMT6sH8VMjQJfwxYPAB+mxquTp2Ok1QeDUpBMqjzWUuzQ/7zwKjAbGv4zT7kok1InMSrm+oAL99uXzZZyg==
+"@fisker/commitlint-config@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@fisker/commitlint-config/-/commitlint-config-1.0.6.tgz#c6ed777233e53af5c547773f31b9ac7032baf3af"
+  integrity sha512-ZIAqG3u+XOh4YfmKJwIZ8ZZ4WsW7lmmFjL0SKLOlVA6MnDPISIDYUS1VxRdFzk+H0dk+g/ZtxDTGBg5vtCjWKA==
   dependencies:
     "@commitlint/config-conventional" "^7.5.0"
 
