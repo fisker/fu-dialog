@@ -62,7 +62,7 @@
     "table": "5.3.2",
     "uglify-js": "3.5.11",
     "write-pkg": "4.0.0",
-    "yarn": "1.15.2"
+    "yarn": "1.16.0"
   },
   "files": [
     "lib",
