@@ -8366,10 +8366,10 @@ synchronous-promise@^2.0.6:
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.7.tgz#3574b3d2fae86b145356a4b89103e1577f646fe3"
   integrity sha512-16GbgwTmFMYFyQMLvtQjvNWh30dsFe1cAW5Fg1wm5+dg84L9Pe36mftsIRU95/W2YsISxsz/xq4VB23sqpgb/A==
 
-table@5.3.0, table@^5.2.3:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/table/-/table-5.3.0.tgz#8a2c3354dc87312328c68732039b38b6a41c86c9"
-  integrity sha512-6V2qlZHIbbZQGzoP3Ghcj/IQDPhBvQYjZE4W4JEyFMkbzHziIzG6jxmAD87BZ1ZXgwPwgu3MzvCUGMOFRN7wlw==
+table@5.3.1, table@^5.2.3:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/table/-/table-5.3.1.tgz#470078a3637a257d535f15a2a4ac547c84e1153a"
+  integrity sha512-akPZC6vB5F1OOZ8rtp5nl/ywDwyFi/lZ3ib+ZdPkbynZuyQo5JBKsGQ7w5NUTC3rndNPQtBV13ufH5vFB7nBZQ==
   dependencies:
     ajv "^6.9.1"
     lodash "^4.17.11"
