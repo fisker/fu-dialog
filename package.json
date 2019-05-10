@@ -20,7 +20,7 @@
     "@fisker/eslint-config": "^1.0.11",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/postcss-config": "^1.0.3",
-    "@fisker/prettier-config": "^1.0.16",
+    "@fisker/prettier-config": "^1.0.17",
     "@fisker/stylelint-config": "^1.0.6",
     "babel-plugin-transform-es3-member-expression-literals": "6.22.0",
     "babel-plugin-transform-es3-property-literals": "6.22.0",
