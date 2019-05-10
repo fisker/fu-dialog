@@ -832,17 +832,17 @@
   resolved "https://registry.yarnpkg.com/@fisker/lint-staged-config/-/lint-staged-config-1.0.4.tgz#08206dd7ce02fccce83939fcf21ba2b774b5be36"
   integrity sha512-hzNU3DPo8SKCWKN4ew/6GZugxl2qihN6jOjQv3yvtOE1u+W2rXS8Wxjdoh4Nia4ggdEIqkNkWcGr8KzjzpFhEA==
 
-"@fisker/postcss-config@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@fisker/postcss-config/-/postcss-config-1.0.3.tgz#5cef26c77c8688756dda00cbbd6627dfa7a08fca"
-  integrity sha512-U04dEEWLaL287/VKbg9H55g54uKSpIRzTyVz+87k/P3Xb7x4oJ6c/2lGaWuFwJ3Cg3Q6NccfyWNKkwwMgcDmAA==
+"@fisker/postcss-config@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/@fisker/postcss-config/download/@fisker/postcss-config-1.0.4.tgz#4b497d90ea042d75065574a95f42b5dbb7243f08"
+  integrity sha1-S0l9kOoELXUGVXSpX0K127ckPwg=
   dependencies:
     postcss-preset-env "^6.6.0"
 
-"@fisker/prettier-config@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.16.tgz#433acbb263069054dfc10e50f34dffe131feef5d"
-  integrity sha512-RLrBP5vJSEbx4YeDOKcJ9gN2rdd1mqo21GsMbezsOQm9vxkYFhicAs93+taq+EJbuyJbDZz3oYveEI4HM1Jx+w==
+"@fisker/prettier-config@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.npm.taobao.org/@fisker/prettier-config/download/@fisker/prettier-config-1.0.17.tgz#1980baacb4627294859bbf60063e1796411e98c6"
+  integrity sha1-GYC6rLRicpSFm79gBj4XlkEemMY=
 
 "@fisker/stylelint-config@^1.0.6":
   version "1.0.6"
@@ -3605,7 +3605,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-globby@^9.0.0, globby@^9.2.0:
+globby@^9.0.0, globby@^9.1.0, globby@^9.2.0:
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-9.2.0.tgz#fd029a706c703d29bdd170f4b6db3a3f7a7cb63d"
   integrity sha512-ollPHROa5mcxDEkwg6bPt3QbEf4pDQSNtd6JPL1YvOvAo/7/0VAm9TccUeoTmarjPw4pfUthSCqcyfNB1I3ZSg==
@@ -7146,12 +7146,12 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-dir-deep@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-5.0.0.tgz#a75810884a4943dafd073e9fc437bbade8879100"
-  integrity sha512-5mY75iXXuU8hizPeCRRn+VwLUNl5eb3vio6l5L1QFFkhNXupUrd2TSMgsFWOngm64E842ebSYTu9/aIAug5rMg==
+read-dir-deep@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.npm.taobao.org/read-dir-deep/download/read-dir-deep-4.0.3.tgz#c638c34b9ffe8a6d92a0a8c80b47259dc792082a"
+  integrity sha1-xjjDS5/+im2SoKjIC0clnceSCCo=
   dependencies:
-    globby "^9.2.0"
+    globby "^9.1.0"
     path-sort2 "^1.0.0"
 
 read-file-stdin@^0.2.0:
@@ -9107,11 +9107,6 @@ yargs@^12.0.1, yargs@^12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
-
-yarn@1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.16.0.tgz#5701b58ac555ff91f7b889b7d791b3dc86f8f999"
-  integrity sha512-cfemyGlnWKA1zopUUgebTPf8C4WkPIZ+TJmklwcEAJ4u6oWPtJeAzrsamaGGh/+b1XWe8W51yzAImC4AWbWR1g==
 
 yup@^0.27.0:
   version "0.27.0"
