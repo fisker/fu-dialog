@@ -3615,7 +3615,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-globby@^9.0.0, globby@^9.1.0, globby@^9.2.0:
+globby@^9.0.0, globby@^9.2.0:
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-9.2.0.tgz#fd029a706c703d29bdd170f4b6db3a3f7a7cb63d"
   integrity sha512-ollPHROa5mcxDEkwg6bPt3QbEf4pDQSNtd6JPL1YvOvAo/7/0VAm9TccUeoTmarjPw4pfUthSCqcyfNB1I3ZSg==
@@ -7163,12 +7163,12 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-dir-deep@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.npm.taobao.org/read-dir-deep/download/read-dir-deep-4.0.3.tgz#c638c34b9ffe8a6d92a0a8c80b47259dc792082a"
-  integrity sha1-xjjDS5/+im2SoKjIC0clnceSCCo=
+read-dir-deep@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-6.0.0.tgz#fc45279721a6995fa5ddfa036982e1ab90a3a7be"
+  integrity sha512-bNqElETFb4U+ZDo8fObqq91Nub0Vs4kgkmfR8hfr9uGgz1DL+7saClZjMn7Rd4GrCbardKyLisZkEYWrOn51Dw==
   dependencies:
-    globby "^9.1.0"
+    globby "^9.2.0"
     path-sort2 "^1.0.0"
 
 read-file-stdin@^0.2.0:
