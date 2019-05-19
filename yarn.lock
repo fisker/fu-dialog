@@ -812,15 +812,15 @@
   dependencies:
     "@commitlint/config-conventional" "^7.6.0"
 
-"@fisker/eslint-config@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.npm.taobao.org/@fisker/eslint-config/download/@fisker/eslint-config-1.0.12.tgz#242a1e3e7230b1d80cb9413483b9e8ba733959aa"
-  integrity sha1-JCoePnIwsdgMuUE0g7nounM5Wao=
+"@fisker/eslint-config@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.0.14.tgz#baad363d417653e7a1ffb39f146df9c0bd675c96"
+  integrity sha512-SiwrM8kuXqlmiK1Wly9B1pUT0mWPC97mouioZQuWTqFJ/DAY6ChB2bRp+BtBJS5otT6Dtejw4TmRjuDcXd/XEQ==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
-    eslint-config-prettier "^4.2.0"
+    eslint-config-prettier "^4.3.0"
     eslint-plugin-eslint-comments "^3.1.1"
-    eslint-plugin-html "^5.0.4"
+    eslint-plugin-html "^5.0.5"
     eslint-plugin-import "^2.17.2"
     eslint-plugin-node "^9.0.1"
     eslint-plugin-prettier "^3.1.0"
@@ -2909,10 +2909,10 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-prettier@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.2.0.tgz#70b946b629cd0e3e98233fd9ecde4cb9778de96c"
-  integrity sha512-y0uWc/FRfrHhpPZCYflWC8aE0KRJRY04rdZVfl8cL3sEZmOYyaBdhdlQPjKZBnuRMyLVK+JUZr7HaZFClQiH4w==
+eslint-config-prettier@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
+  integrity sha512-sZwhSTHVVz78+kYD3t5pCWSYEdVSBR0PXnwjDRsUs8ytIrK8PLXw+6FKp8r3Z7rx4ZszdetWlXYKOHoUrrwPlA==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -2948,10 +2948,10 @@ eslint-plugin-eslint-comments@^3.1.1:
     escape-string-regexp "^1.0.5"
     ignore "^5.0.5"
 
-eslint-plugin-html@^5.0.4:
+eslint-plugin-html@^5.0.5:
   version "5.0.5"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-html/download/eslint-plugin-html-5.0.5.tgz#e2388f813f75b2287cde884811eab287de8e0f56"
-  integrity sha1-4jiPgT91sih83ohIEeqyh96OD1Y=
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-5.0.5.tgz#e2388f813f75b2287cde884811eab287de8e0f56"
+  integrity sha512-v/33i3OD0fuXcRXexVyXXBOe4mLBLBQoF1UO1Uy9D+XLq4MC8K45GcQKfqjC/FnHAHp3pYUjpHHktYNCtShGmg==
   dependencies:
     htmlparser2 "^3.10.0"
 
