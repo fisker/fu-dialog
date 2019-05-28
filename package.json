@@ -36,7 +36,7 @@
     "gzip-size": "^5.1.1",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
-    "jsdom": "^15.1.0",
+    "jsdom": "^15.1.1",
     "lint-staged": "^8.1.7",
     "markdownlint-cli": "^0.16.0",
     "mem": "^5.0.0",
