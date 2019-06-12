@@ -34,7 +34,7 @@
     "es6-promise": "^4.2.8",
     "eslint": "^5.16.0",
     "gzip-size": "^5.1.1",
-    "husky": "^2.4.0",
+    "husky": "^2.4.1",
     "jest": "^24.8.0",
     "jsdom": "^15.1.1",
     "lint-staged": "^8.2.0",
