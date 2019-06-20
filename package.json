@@ -18,6 +18,7 @@
     "@commitlint/cli": "^8.0.0",
     "@fisker/commitlint-config": "^1.0.9",
     "@fisker/eslint-config": "^1.1.1",
+    "@fisker/husky-config": "^1.1.0",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/postcss-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
@@ -96,13 +97,16 @@
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "lint": "run-p lint:*",
-    "lint:style": "stylelint **/*.{css,scss,less} --fix",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:stylelint": "stylelint **/*.{css,scss,less}",
+    "lint:eslint": "eslint **/*.{js,mjs,vue}",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build test prettier dist",
+    "release": "run-s clean lint build test format dist",
     "test": "jest",
     "version": "yarn build && git add lib",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
+    "format:stylelint": "yarn lint:stylelint --fix"
   },
   "version": "1.0.11",
   "bugs": {
@@ -113,5 +117,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
     }
-  }
+  },
+  "sideEffects": false
 }

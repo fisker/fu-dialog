@@ -9,11 +9,13 @@
 
 module.exports = {
   root: true,
+  env: {},
   parserOptions: {},
   extends: ['@fisker'],
   settings: {},
   rules: {},
   plugins: [],
+  globals: {},
   overrides: [
     {
       files: ['demo/**/*.js'],
