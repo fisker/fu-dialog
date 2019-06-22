@@ -5,6 +5,8 @@ node_js:
   - "12"
 sudo: false
 cache: yarn
+before_script:
+  - npm install --global parcel-bundler
 script:
   - yarn lint
   - yarn build
