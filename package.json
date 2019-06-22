@@ -106,6 +106,7 @@
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
     "release": "run-s clean lint build test format dist",
     "test": "jest",
+    "test-coverage": "jest --coverage",
     "version": "yarn build && git add lib",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
