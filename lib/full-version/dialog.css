@@ -49,8 +49,7 @@ dialog.fixed {
   border: 0;
   padding: 0;
   width: 300px;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
+  border-radius: 2px;
   color: inherit;
   line-height: 1.4;
 }
