@@ -10,4 +10,4 @@ function addClassByClassName(element, className) {
   return element
 }
 
-export default (SUPPORTS_CLASS_LIST ? addClassByClassList : addClassByClassName)
+export default SUPPORTS_CLASS_LIST ? addClassByClassList : addClassByClassName

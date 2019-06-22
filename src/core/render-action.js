@@ -1,9 +1,9 @@
 import addListener from '../dom/add-listener'
 
 function renderAction(container, button, dialog) {
-  const {el, action} = button
+  const {el: element, action} = button
 
-  addListener(el, 'click', function() {
+  addListener(element, 'click', function() {
     let result
 
     if (action) {
@@ -15,7 +15,7 @@ function renderAction(container, button, dialog) {
     }
   })
 
-  container.appendChild(el)
+  container.appendChild(element)
 
   return container
 }
