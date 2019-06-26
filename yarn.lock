@@ -7144,10 +7144,10 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-dir-deep@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npm.taobao.org/read-dir-deep/download/read-dir-deep-6.0.0.tgz#fc45279721a6995fa5ddfa036982e1ab90a3a7be"
-  integrity sha1-/EUnlyGmmV+l3foDaYLhq5Cjp74=
+read-dir-deep@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/read-dir-deep/-/read-dir-deep-6.0.1.tgz#81ab8ed97b8a0a8dc0d49e8d96bc07591c46cf85"
+  integrity sha512-D3LAOSJNEIOuklvN7CY1trHtggOPTd+VvsHpZLWeWdHRKfr5/FOrsxhZdWN2pIPmijO/otGDt6AXsZSJ4AhMow==
   dependencies:
     globby "^9.2.0"
     path-sort2 "^1.0.0"
