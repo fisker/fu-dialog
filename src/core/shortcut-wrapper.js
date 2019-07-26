@@ -1,5 +1,5 @@
 import noop from '../utils/noop'
-import environment from './env'
+import environment from './environment'
 
 function shortcutWrapper(method) {
   return function shortcutWrapper(options, onAction = noop) {

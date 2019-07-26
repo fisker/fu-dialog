@@ -8,7 +8,7 @@ import preventEvent from '../dom/prevent-event'
 import parseDialogOptions from './parse-options'
 import parseAction from './parse-action'
 import renderAction from './render-action'
-import environment from './env'
+import environment from './environment'
 import forEach from '../utils/for-each'
 
 function registerDialog(dialog) {

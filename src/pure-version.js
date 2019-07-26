@@ -1,4 +1,4 @@
-import environment from './core/env'
+import environment from './core/environment'
 import globalThis from './utils/global-this'
 import assign from './utils/assign'
 import exportModule from './core/export-module'

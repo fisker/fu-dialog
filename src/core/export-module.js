@@ -7,7 +7,7 @@ import createAction, {
   createConfirmAction,
   createCancelAction,
 } from './create-action'
-import environment, {setEnvironment} from './env'
+import environment, {setEnvironment} from './environment'
 
 function exportModule() {
   function dialog(options) {
