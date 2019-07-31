@@ -60,7 +60,7 @@
     "rollup-plugin-terser": "5.1.1",
     "sass": "1.22.9",
     "stylelint": "10.1.0",
-    "table": "5.4.4",
+    "table": "5.4.5",
     "uglify-js": "3.6.0",
     "write-pkg": "4.0.0"
   },
