@@ -10,14 +10,10 @@ import filesize from 'rollup-plugin-filesize'
 
 const buildConfig = require('./scripts/build.config')
 
-const builds = Object.keys(buildConfig.builds).map(format =>
-  Object.assign(
-    {
-      format,
-    },
-    buildConfig.builds[format]
-  )
-)
+const builds = Object.keys(buildConfig.builds).map(format => ({
+  format,
+  ...buildConfig.builds[format],
+}))
 
 function rolllupPlugins({minify}) {
   return [
