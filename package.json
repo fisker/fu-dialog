@@ -59,7 +59,7 @@
     "rollup-plugin-prettier": "0.6.0",
     "rollup-plugin-terser": "5.1.2",
     "sass": "1.22.12",
-    "stylelint": "10.1.0",
+    "stylelint": "11.0.0",
     "table": "5.4.6",
     "uglify-js": "3.6.0",
     "write-pkg": "4.0.0"
