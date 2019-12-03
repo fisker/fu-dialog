@@ -4,7 +4,7 @@
 rollup --config rollup.config.js
 
 # prettier
-prettier "lib/**/*.{mjs,js}" --write
+prettier "dist/**/*.{mjs,js}" --write
 
 # minify js
-# uglifyjs --compress --mangle --output lib/full-version/dialog.umd.min.js --ie8 lib/full-version/dialog.umd.js
+# uglifyjs --compress --mangle --output dist/full-version/dialog.umd.min.js --ie8 dist/full-version/dialog.umd.js
