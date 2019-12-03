@@ -15,6 +15,10 @@ jobs:
           command: yarn
 
       - run:
+          name: Install Parcel
+          command: yarn add parcel-bundler
+
+      - run:
           name: Build dist
           command: yarn build
 
