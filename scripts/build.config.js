@@ -17,7 +17,7 @@ const banner = {
   }),
 }
 
-const dist = 'lib'
+const dist = 'dist'
 const source = 'src'
 
 const builds = {

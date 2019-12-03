@@ -93,6 +93,5 @@ typings/
 .dynamodb/
 
 # project ignore files
-/dist
+dist/
 /.cache
-/yarn-error.log

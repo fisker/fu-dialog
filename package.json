@@ -1,17 +1,74 @@
 {
+  "name": "fu-dialog",
+  "version": "1.0.11",
+  "description": "fisker's dialog",
+  "keywords": [
+    "alert",
+    "confirm",
+    "dialog",
+    "promise",
+    "prompt"
+  ],
+  "homepage": "https://github.com/fisker/fu-dialog#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/fu-dialog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fisker/fu-dialog.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "browser": "lib/full-version/dialog.min.js",
-  "style": "lib/full-version/dialog.min.css",
-  "unpkg": "lib/full-version/dialog.min.js",
-  "main": "lib/full-version/dialog.common.js",
-  "module": "lib/full-version/dialog.esm.min.mjs",
-  "umd:main": "lib/full-version/dialog.min.js",
-  "jsdelivr": "lib/full-version/dialog.min.js",
-  "description": "fisker's dialog",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "main": "dist/full-version/dialog.common.js",
+  "umd:main": "dist/full-version/dialog.min.js",
+  "jsdelivr": "dist/full-version/dialog.min.js",
+  "unpkg": "dist/full-version/dialog.min.js",
+  "module": "dist/full-version/dialog.esm.min.mjs",
+  "browser": "dist/full-version/dialog.min.js",
+  "style": "dist/full-version/dialog.min.css",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:css": "bash ./scripts/build-css.sh",
+    "build:docs": "parcel build demo/index.html --out-dir docs",
+    "build:js": "bash ./scripts/build-js.sh",
+    "build:package": "bash ./scripts/build-package.sh",
+    "build:styles": "bash ./scripts/build-styles-source.sh",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
+    "dev": "parcel demo/index.html --open",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "format:prettier": "yarn lint:prettier --write",
+    "format:stylelint": "yarn lint:stylelint --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "release": "run-s clean lint build test format dist",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "version": "yarn build && git add dist"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
@@ -30,7 +87,8 @@
     "cp-file": "7.0.0",
     "create-banner": "1.0.0",
     "cssnano-cli": "1.0.5",
-    "cz-conventional-changelog-emoji": "0.1.0",
+    "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "dialog-polyfill": "0.5.0",
     "es6-promise": "4.2.8",
     "eslint": "6.7.2",
@@ -59,66 +117,14 @@
     "rollup-plugin-prettier": "0.6.0",
     "rollup-plugin-terser": "5.1.2",
     "sass": "1.23.7",
+    "sort-package-json": "1.30.0",
     "stylelint": "12.0.0",
     "table": "5.4.6",
     "uglify-js": "3.7.1",
     "write-pkg": "4.0.0"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
-  "keywords": [
-    "dialog",
-    "alert",
-    "confirm",
-    "prompt",
-    "promise"
-  ],
-  "license": "MIT",
-  "name": "fu-dialog",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fisker/fu-dialog.git"
-  },
-  "scripts": {
-    "build": "run-p build:*",
-    "build:css": "bash ./scripts/build-css.sh",
-    "build:docs": "parcel build demo/index.html --out-dir docs",
-    "build:js": "bash ./scripts/build-js.sh",
-    "build:package": "bash ./scripts/build-package.sh",
-    "build:styles": "bash ./scripts/build-styles-source.sh",
-    "clean": "rimraf lib",
-    "dev": "parcel demo/index.html --open",
-    "dist": "run-p dist:*",
-    "dist:npm": "np --yolo --no-yarn",
-    "format": "run-p format:*",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
-    "format:stylelint": "yarn lint:stylelint --fix",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
-    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
-    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
-    "release": "run-s clean lint build test format dist",
-    "test": "jest",
-    "test-coverage": "jest --coverage",
-    "version": "yarn build && git add lib"
-  },
-  "version": "1.0.11",
-  "bugs": {
-    "url": "https://github.com/fisker/fu-dialog/issues"
-  },
-  "homepage": "https://github.com/fisker/fu-dialog#readme",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog-emoji"
-    }
-  },
-  "sideEffects": false
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
