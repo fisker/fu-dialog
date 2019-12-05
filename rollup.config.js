@@ -1,12 +1,10 @@
-// rollup.config.js
-
 import commonjs from 'rollup-plugin-commonjs'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import json from 'rollup-plugin-json'
+import nodeResolve from '@rollup/plugin-node-resolve'
+// eslint-disable-next-line import/no-unresolved
+import json from '@rollup/plugin-json'
 import babel from 'rollup-plugin-babel'
 import {terser} from 'rollup-plugin-terser'
 // import prettier from 'rollup-plugin-prettier'
-import filesize from 'rollup-plugin-filesize'
 
 const buildConfig = require('./scripts/build.config')
 
@@ -27,7 +25,6 @@ function rolllupPlugins({minify}) {
     nodeResolve(),
     babel(),
     minify ? terser() : null,
-    filesize(),
   ]
 }
 
