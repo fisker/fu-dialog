@@ -44,6 +44,7 @@
     "build:styles": "bash ./scripts/build-styles-source.sh",
     "clean": "run-p clean:*",
     "clean:dist": "del-cli dist",
+    "clean:docs": "del-cli docs",
     "dev": "parcel demo/index.html --open",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
