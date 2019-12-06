@@ -123,6 +123,9 @@
     "uglify-js": "3.7.1",
     "write-pkg": "4.0.0"
   },
+  "resolutions": {
+    "browserslist": "4.8.0"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
