@@ -90,9 +90,6 @@ jobs:
         with:
           node-version: "12"
 
-      - name: Install Parcel
-        run: npm install --global parcel-bundler
-
       - name: Install Dependencies
         run: yarn
 
