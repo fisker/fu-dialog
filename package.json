@@ -81,7 +81,7 @@
     "@fisker/postcss-config": "1.1.4",
     "@fisker/prettier-config": "1.0.24",
     "@fisker/stylelint-config": "1.2.0",
-    "@rollup/plugin-json": "4.0.0",
+    "@rollup/plugin-json": "4.0.1",
     "@rollup/plugin-node-resolve": "6.0.0",
     "babel-plugin-transform-es3-member-expression-literals": "6.22.0",
     "babel-plugin-transform-es3-property-literals": "6.22.0",
