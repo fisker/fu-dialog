@@ -1,4 +1,4 @@
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 // eslint-disable-next-line import/no-unresolved
 import json from '@rollup/plugin-json'
