@@ -70,6 +70,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "resolutions": {
+    "browserslist": "4.8.0"
+  },
   "devDependencies": {
     "@babel/core": "7.7.7",
     "@babel/preset-env": "7.7.7",
@@ -118,14 +121,11 @@
     "rollup-plugin-prettier": "0.6.0",
     "rollup-plugin-terser": "5.1.3",
     "sass": "1.24.2",
-    "sort-package-json": "1.35.0",
+    "sort-package-json": "1.36.0",
     "stylelint": "12.0.1",
     "table": "5.4.6",
     "uglify-js": "3.7.3",
     "write-pkg": "4.0.0"
-  },
-  "resolutions": {
-    "browserslist": "4.8.0"
   },
   "publishConfig": {
     "access": "public",
