@@ -23,10 +23,6 @@
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "sideEffects": false,
   "main": "dist/full-version/dialog.common.js",
   "umd:main": "dist/full-version/dialog.min.js",
@@ -35,6 +31,10 @@
   "module": "dist/full-version/dialog.esm.min.mjs",
   "browser": "dist/full-version/dialog.min.js",
   "style": "dist/full-version/dialog.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "run-p build:*",
     "build:css": "bash ./scripts/build-css.sh",
@@ -90,7 +90,7 @@
     "babel-plugin-transform-es3-member-expression-literals": "6.22.0",
     "babel-plugin-transform-es3-property-literals": "6.22.0",
     "babel-plugin-transform-es5-property-mutators": "6.24.1",
-    "caniuse-lite": "1.0.30001015",
+    "caniuse-lite": "1.0.30001023",
     "cp-file": "7.0.0",
     "create-banner": "1.0.0",
     "cssnano-cli": "1.0.5",
@@ -120,8 +120,8 @@
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-prettier": "0.6.0",
     "rollup-plugin-terser": "5.2.0",
-    "sass": "1.25.0",
-    "sort-package-json": "1.39.0",
+    "sass": "1.25.1-test.1",
+    "sort-package-json": "1.39.1",
     "stylelint": "13.0.0",
     "table": "5.4.6",
     "uglify-js": "3.7.6",
