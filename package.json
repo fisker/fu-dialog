@@ -122,7 +122,7 @@
     "rollup-plugin-terser": "5.2.0",
     "sass": "1.25.1-test.1",
     "sort-package-json": "1.39.1",
-    "stylelint": "13.1.0",
+    "stylelint": "13.2.0",
     "table": "5.4.6",
     "uglify-js": "3.7.7",
     "write-pkg": "4.0.0"
