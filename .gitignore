@@ -95,3 +95,4 @@ typings/
 # project ignore files
 dist/
 /.cache
+/docs
