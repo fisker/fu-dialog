@@ -1,6 +1,6 @@
 function one(fn) {
   let called = false
-  return function(...arguments_) {
+  return function (...arguments_) {
     if (called) {
       return null
     }

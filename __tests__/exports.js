@@ -25,12 +25,12 @@ describe('exports', () => {
     'confirm',
     'prompt',
     'action',
-  ].forEach(method => {
+  ].forEach((method) => {
     test(`${buildConfig.libName}.${method} should be a function`, () => {
       expect(typeof library[method]).toBe('function')
     })
   })
-  ;['confirm', 'cancel'].forEach(method => {
+  ;['confirm', 'cancel'].forEach((method) => {
     test(`${buildConfig.libName}.action.${method} should be a function`, () => {
       expect(typeof library.action[method]).toBe('function')
     })

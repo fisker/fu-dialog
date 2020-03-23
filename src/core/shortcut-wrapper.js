@@ -7,8 +7,8 @@ function shortcutWrapper(method) {
     let dialog
 
     if (Promise) {
-      const promise = new Promise(resolve => {
-        dialog = method(options, function(result) {
+      const promise = new Promise((resolve) => {
+        dialog = method(options, function (result) {
           resolve(result)
           return onAction.call(this, result)
         })

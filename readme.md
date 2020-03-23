@@ -146,22 +146,22 @@ fd.alert('test', () => {
 // dialog is attached to promise
 const {dialog} = fd.alert('test')
 
-fd.confirm('test', result => {
+fd.confirm('test', (result) => {
   // result is true, when confirm button is clicked
   // result is false, when cancel button is clicked
   // result is false, when closeBtn is clicked
   // result is false, `esc` key is pressed
   console.log('result', result)
-}).then(result => {
+}).then((result) => {
   // result same as above
 })
 
-fd.prompt('test', result => {
+fd.prompt('test', (result) => {
   // result is String(input.value), when confirm button is clicked
   // result is undefined, when cancel button is clicked
   // result is undefined, when closeBtn is clicked
   // result is undefined, `esc` key is pressed
-}).then(result => {
+}).then((result) => {
   // result same as above
 })
 ```
@@ -222,7 +222,7 @@ fd.dialog({
     // only text
     fd.action('a custom button'),
     // only action
-    fd.action('a custom button with action', function() {
+    fd.action('a custom button with action', function () {
       console.log('a custom action')
     }),
   ],
@@ -252,7 +252,7 @@ fd.dialog({
     // only text
     fd.action.confirm('a custom confirm'),
     // only action
-    fd.action.confirm(function() {
+    fd.action.confirm(function () {
       console.log('a custom confirm action')
     }),
   ],
@@ -268,7 +268,7 @@ fd.dialog({
     // only text
     fd.action.cancel('a custom cancel'),
     // only action
-    fd.action.cancel(function() {
+    fd.action.cancel(function () {
       console.log('a custom cancel action')
     }),
   ],

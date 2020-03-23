@@ -14,7 +14,7 @@ function appendElement(parent, children) {
   }
 
   if (isArrayLike(children)) {
-    forEach.call(children, function(child) {
+    forEach.call(children, function (child) {
       appendElement(parent, child)
     })
 

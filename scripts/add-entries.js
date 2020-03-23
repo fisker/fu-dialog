@@ -30,7 +30,7 @@ const entries = {
 }
 
 Object.keys(entries)
-  .map(entry => ({
+  .map((entry) => ({
     entry,
     format: entries[entry],
   }))

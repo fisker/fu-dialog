@@ -32,7 +32,7 @@ beforeEach(() => {
 })
 
 describe.skip('support Data Types', () => {
-  testData.forEach(value => {
+  testData.forEach((value) => {
     test(`${getType(value)}`, () => {
       window[buildConfig.libName].alert(value)
       const messageBody = window.document.querySelector(

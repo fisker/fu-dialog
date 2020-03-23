@@ -45,7 +45,7 @@ class Dialog {
     if (preventCancel) {
       preventEvent(container, 'cancel')
     } else {
-      addListener(container, 'cancel', function() {
+      addListener(container, 'cancel', function () {
         if (onCancel) {
           onCancel()
         }
@@ -61,7 +61,7 @@ class Dialog {
         innerHTML: `<span>${String(closeButtonText)}</span>`,
       })
 
-      addListener(closeButton, 'click', function() {
+      addListener(closeButton, 'click', function () {
         if (onClose) {
           onClose()
         }
@@ -103,7 +103,7 @@ class Dialog {
 
       const actionsContainer = createElement(foot, 'div', classNames.ACTIONS)
 
-      forEach.call(actions, action =>
+      forEach.call(actions, (action) =>
         renderAction(actionsContainer, action, dialog)
       )
     }

@@ -49,7 +49,7 @@ function createTypedAction(type) {
     typedActionClassName = classNames.ACTION_TYPE_CANCEL
   }
 
-  return function(actionText, action) {
+  return function (actionText, action) {
     const DEFAULT_TEXT = defaults[`${type}ActionText`]
 
     if (typeof actionText === 'function') {

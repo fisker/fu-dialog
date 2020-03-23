@@ -41,9 +41,9 @@ const dataTypes = [
   new Error('error'),
   /regexp/,
 ]
-forEach.call(dataTypes, value => {
+forEach.call(dataTypes, (value) => {
   const button = createTestButton(`${getType(value)}: ${String(value)}`)
-  addListener(button, 'click', function() {
+  addListener(button, 'click', function () {
     _.alert(value)
   })
   container.appendChild(button)
@@ -83,7 +83,7 @@ function customActions() {
           })
         },
       },
-      function() {
+      function () {
         alert('函数')
       },
       ['类数组(如jQuery对象)'],
@@ -97,32 +97,32 @@ function customActions() {
 }
 
 function alertCallback() {
-  _.alert('请点击确定', function() {
+  _.alert('请点击确定', function () {
     alert('【确定】按钮被点击')
   })
 }
 function alertPromise() {
-  _.alert('请点击确定').then(function() {
+  _.alert('请点击确定').then(function () {
     alert('【确定】按钮被点击')
   })
 }
 function confirmCallback() {
-  _.confirm('请点击一个按钮', function(result) {
+  _.confirm('请点击一个按钮', function (result) {
     alert(`【${result ? '确定' : '取消'}】按钮被点击`)
   })
 }
 function confirmPromise() {
-  _.confirm('请点击一个按钮').then(function(result) {
+  _.confirm('请点击一个按钮').then(function (result) {
     alert(`【${result ? '确定' : '取消'}】按钮被点击`)
   })
 }
 function promptCallback() {
-  _.prompt('请输入点什么', function(result) {
+  _.prompt('请输入点什么', function (result) {
     alert(`${typeof result} : ${result}`)
   })
 }
 function promptPromise() {
-  _.prompt({message: '请输入点什么', rows: 5}).then(function(result) {
+  _.prompt({message: '请输入点什么', rows: 5}).then(function (result) {
     alert(`${typeof result} : ${result}`)
   })
 }
@@ -131,7 +131,7 @@ function preventClose() {
   _.alert({
     message: 'test',
     actions: [
-      _.action.confirm('return false in action', function() {
+      _.action.confirm('return false in action', function () {
         return false
       }),
     ],
@@ -139,7 +139,7 @@ function preventClose() {
 }
 
 function preventClose2() {
-  _.alert('return false in callback', function() {
+  _.alert('return false in callback', function () {
     return false
   })
 }

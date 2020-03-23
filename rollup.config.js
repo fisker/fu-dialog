@@ -8,7 +8,7 @@ import {terser} from 'rollup-plugin-terser'
 
 const buildConfig = require('./scripts/build.config')
 
-const builds = Object.keys(buildConfig.builds).map(format => ({
+const builds = Object.keys(buildConfig.builds).map((format) => ({
   format,
   ...buildConfig.builds[format],
 }))
@@ -59,13 +59,13 @@ function buildVersion(version, minify) {
   return {
     input: `${buildConfig.src}/${version.entry}.js`,
     output: builds
-      .filter(build => {
+      .filter((build) => {
         if (minify && !build.minify) {
           return false
         }
         return true
       })
-      .map(build =>
+      .map((build) =>
         rollupOutput({
           version,
           build,
@@ -78,14 +78,14 @@ function buildVersion(version, minify) {
   }
 }
 
-const versions = buildConfig.versions.map(version =>
+const versions = buildConfig.versions.map((version) =>
   buildVersion(version, false)
 )
 
-const minVersions = buildConfig.versions.map(version =>
+const minVersions = buildConfig.versions.map((version) =>
   buildVersion(version, true)
 )
 
 export default [...versions, ...minVersions].filter(
-  config => config.output.length
+  (config) => config.output.length
 )
