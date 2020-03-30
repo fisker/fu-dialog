@@ -9,7 +9,7 @@ const testData = [
   undefined,
   null,
   123,
-  NaN,
+  Number.NaN,
   true,
   false,
   [1, 2, 3],
