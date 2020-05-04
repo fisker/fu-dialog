@@ -94,7 +94,7 @@
     "cp-file": "9.0.0",
     "create-banner": "1.0.0",
     "cssnano-cli": "1.0.5",
-    "cz-conventional-changelog": "3.1.1",
+    "cz-conventional-changelog": "3.2.0",
     "del-cli": "3.0.0",
     "dialog-polyfill": "0.5.1",
     "es6-promise": "4.2.8",
