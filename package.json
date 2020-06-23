@@ -101,7 +101,7 @@
     "eslint": "7.2.0",
     "gzip-size": "5.1.1",
     "husky": "4.2.5",
-    "jest": "26.0.1",
+    "jest": "26.1.0",
     "jsdom": "16.2.2",
     "lint-staged": "10.2.11",
     "markdownlint-cli": "0.23.1",
