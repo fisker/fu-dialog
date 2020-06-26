@@ -71,7 +71,7 @@
     }
   },
   "resolutions": {
-    "browserslist": "4.12.1"
+    "browserslist": "4.12.2"
   },
   "devDependencies": {
     "@babel/core": "7.10.3",
