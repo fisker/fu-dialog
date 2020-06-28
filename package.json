@@ -13,10 +13,8 @@
   "bugs": {
     "url": "https://github.com/fisker/fu-dialog/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fisker/fu-dialog.git"
-  },
+  "repository": "fisker/fu-dialog",
+  "funding": "https://github.com/fisker/fu-dialog?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",
@@ -55,10 +53,10 @@
     "format:prettier": "yarn lint:prettier --write",
     "format:stylelint": "yarn lint:stylelint --fix",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:eslint": "eslint \"**/*.{js,mjs,cjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:package-json": "yarn run format:package-json --check",
-    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
     "release": "run-s clean lint build test format dist",
     "test": "jest",
