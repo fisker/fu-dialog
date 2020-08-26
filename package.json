@@ -109,7 +109,7 @@
     "postcss-cli": "7.1.1",
     "postcss-header": "2.0.0",
     "postcss-pseudo-element-colons": "1.0.2",
-    "prettier": "2.1.0",
+    "prettier": "2.1.1",
     "prettier-config-fisker": "1.0.3",
     "pretty-bytes": "5.3.0",
     "read-dir-deep": "7.0.1",
