@@ -96,7 +96,7 @@
     "del-cli": "3.0.1",
     "dialog-polyfill": "0.5.3",
     "es6-promise": "4.2.8",
-    "eslint": "7.8.1",
+    "eslint": "7.9.0",
     "gzip-size": "5.1.1",
     "husky": "4.3.0",
     "jest": "26.4.2",
