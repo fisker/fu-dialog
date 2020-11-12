@@ -94,7 +94,7 @@
     "cssnano-cli": "1.0.5",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "3.0.1",
-    "dialog-polyfill": "0.5.3",
+    "dialog-polyfill": "0.5.4",
     "es6-promise": "4.2.8",
     "eslint": "7.13.0",
     "gzip-size": "5.1.1",
