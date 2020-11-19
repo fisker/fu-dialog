@@ -121,7 +121,7 @@
     "sass": "1.29.0",
     "sort-package-json": "1.46.1",
     "stylelint": "13.8.0",
-    "table": "6.0.3",
+    "table": "6.0.4",
     "uglify-js": "3.11.6",
     "write-pkg": "4.0.0"
   },
