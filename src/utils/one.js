@@ -1,4 +1,4 @@
-function one(fn) {
+function one(function_) {
   let called = false
   return function (...arguments_) {
     if (called) {
@@ -7,7 +7,7 @@ function one(fn) {
 
     called = true
 
-    return fn.apply(this, arguments_)
+    return function_.apply(this, arguments_)
   }
 }
 
