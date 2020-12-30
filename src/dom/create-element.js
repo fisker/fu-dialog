@@ -20,7 +20,7 @@ function parseDomProperties(properties = {}) {
   }
 
   if (!SUPPORTS_TEXT_CONTENT && 'textContent' in properties) {
-    // eslint-disable-next-line unicorn/prefer-text-content
+    // eslint-disable-next-line unicorn/prefer-dom-node-text-content
     properties.innerText = properties.textContent
     delete properties.textContent
   }
@@ -51,7 +51,7 @@ function createElement(parentNode, tagName, properties = {}) {
   if (typeof parentNode === 'string') {
     properties = tagName
     tagName = parentNode
-    parentNode = null
+    parentNode = undefined
   }
 
   const element = document.createElement(tagName)
