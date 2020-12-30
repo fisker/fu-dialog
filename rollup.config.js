@@ -49,9 +49,7 @@ function rollupOutput({version, build, minify}) {
     name,
     format,
     sourcemap,
-    legacy: true,
     strict: true,
-    treeshake: true,
   }
 }
 
