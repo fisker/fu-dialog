@@ -84,7 +84,7 @@
     "@fisker/stylelint-config": "2.3.5",
     "@rollup/plugin-commonjs": "19.0.0",
     "@rollup/plugin-json": "4.1.0",
-    "@rollup/plugin-node-resolve": "13.0.0",
+    "@rollup/plugin-node-resolve": "13.0.4",
     "babel-plugin-transform-es3-member-expression-literals": "6.22.0",
     "babel-plugin-transform-es3-property-literals": "6.22.0",
     "babel-plugin-transform-es5-property-mutators": "6.24.1",
