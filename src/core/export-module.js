@@ -1,13 +1,13 @@
-import Dialog from './dialog'
-import shortCutWrapper from './shortcut-wrapper'
-import assign from '../utils/assign'
-import defaults, {setDefaults} from './defaults'
-import {alert, confirm, prompt} from './shortcuts'
+import assign from '../utils/assign.js'
+import Dialog from './dialog.js'
+import shortCutWrapper from './shortcut-wrapper.js'
+import defaults, {setDefaults} from './defaults.js'
+import {alert, confirm, prompt} from './shortcuts.js'
 import createAction, {
   createConfirmAction,
   createCancelAction,
-} from './create-action'
-import environment, {setEnvironment} from './environment'
+} from './create-action.js'
+import environment, {setEnvironment} from './environment.js'
 
 function exportModule() {
   function dialog(options) {

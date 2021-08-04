@@ -1,11 +1,9 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Promise from 'es6-promise'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import dialogPolyfill from 'dialog-polyfill'
 
-import environment from './core/environment'
-import assign from './utils/assign'
-import exportModule from './core/export-module'
+import environment from './core/environment.js'
+import assign from './utils/assign.js'
+import exportModule from './core/export-module.js'
 
 assign(environment, {
   Promise,

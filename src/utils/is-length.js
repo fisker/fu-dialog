@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/numeric-separators-style
 const MAX_SAFE_INTEGER = 9007199254740991
 
 function isLength(x) {

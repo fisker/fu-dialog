@@ -1,9 +1,9 @@
-import isArrayLike from '../utils/is-array-like'
-import isNode from '../utils/is-node'
+import isArrayLike from '../utils/is-array-like.js'
+import isNode from '../utils/is-node.js'
 import createAction, {
   createConfirmAction,
   createCancelAction,
-} from './create-action'
+} from './create-action.js'
 
 function parseAction(action) {
   if (typeof action === 'string') {

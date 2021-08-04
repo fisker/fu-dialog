@@ -1,12 +1,12 @@
-import noop from '../utils/noop'
-import * as classNames from './classnames'
-import createElement from '../dom/create-element'
-import addClass from '../dom/add-class'
-import appendElement from '../dom/append-elements'
-import defaults from './defaults'
-import Dialog from './dialog'
-import {createConfirmAction, createCancelAction} from './create-action'
-import parseDialogOptions from './parse-options'
+import noop from '../utils/noop.js'
+import createElement from '../dom/create-element.js'
+import addClass from '../dom/add-class.js'
+import appendElement from '../dom/append-elements.js'
+import * as classNames from './classnames.js'
+import defaults from './defaults.js'
+import Dialog from './dialog.js'
+import {createConfirmAction, createCancelAction} from './create-action.js'
+import parseDialogOptions from './parse-options.js'
 
 function alert(options, onAction = noop) {
   options = parseDialogOptions(options)

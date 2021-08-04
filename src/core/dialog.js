@@ -1,15 +1,15 @@
-import document from '../utils/document'
-import * as classNames from './classnames'
+import document from '../utils/document.js'
+import createElement from '../dom/create-element.js'
+import appendElement from '../dom/append-elements.js'
+import addListener from '../dom/add-listener.js'
+import preventEvent from '../dom/prevent-event.js'
+import forEach from '../utils/for-each.js'
+import * as classNames from './classnames.js'
 
-import createElement from '../dom/create-element'
-import appendElement from '../dom/append-elements'
-import addListener from '../dom/add-listener'
-import preventEvent from '../dom/prevent-event'
-import parseDialogOptions from './parse-options'
-import parseAction from './parse-action'
-import renderAction from './render-action'
-import environment from './environment'
-import forEach from '../utils/for-each'
+import parseDialogOptions from './parse-options.js'
+import parseAction from './parse-action.js'
+import renderAction from './render-action.js'
+import environment from './environment.js'
 
 function registerDialog(dialog) {
   const {dialogPolyfill = {}} = environment
@@ -24,8 +24,6 @@ function registerDialog(dialog) {
 
 class Dialog {
   constructor(options, open) {
-    const dialog = this
-
     options = parseDialogOptions(options)
 
     const hasTitle = !(
@@ -45,11 +43,11 @@ class Dialog {
     if (preventCancel) {
       preventEvent(container, 'cancel')
     } else {
-      addListener(container, 'cancel', function () {
+      addListener(container, 'cancel', () => {
         if (onCancel) {
           onCancel()
         }
-        dialog.remove()
+        this.remove()
       })
     }
 
@@ -61,11 +59,11 @@ class Dialog {
         innerHTML: `<span>${String(closeButtonText)}</span>`,
       })
 
-      addListener(closeButton, 'click', function () {
+      addListener(closeButton, 'click', () => {
         if (onClose) {
           onClose()
         }
-        dialog.remove()
+        this.remove()
       })
     }
 
@@ -104,7 +102,7 @@ class Dialog {
       const actionsContainer = createElement(foot, 'div', classNames.ACTIONS)
 
       forEach.call(actions, (action) =>
-        renderAction(actionsContainer, action, dialog)
+        renderAction(actionsContainer, action, this)
       )
     }
 

@@ -1,8 +1,8 @@
-import isArray from '../utils/is-array'
-import document from '../utils/document'
-import assign from '../utils/assign'
-import {SUPPORTS_TEXT_CONTENT} from './supports'
-import parseClassNames from './parse-classnames'
+import isArray from '../utils/is-array.js'
+import document from '../utils/document.js'
+import assign from '../utils/assign.js'
+import {SUPPORTS_TEXT_CONTENT} from './supports.js'
+import parseClassNames from './parse-classnames.js'
 
 function parseDomProperties(properties = {}) {
   if (isArray(properties) || typeof properties === 'string') {

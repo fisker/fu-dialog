@@ -1,7 +1,7 @@
-import environment from './core/environment'
-import globalThis from './utils/global-this'
-import assign from './utils/assign'
-import exportModule from './core/export-module'
+import environment from './core/environment.js'
+import globalThis from './utils/global-this.js'
+import assign from './utils/assign.js'
+import exportModule from './core/export-module.js'
 
 const {Promise, dialogPolyfill} = globalThis
 

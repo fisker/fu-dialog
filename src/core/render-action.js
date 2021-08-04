@@ -1,4 +1,4 @@
-import addListener from '../dom/add-listener'
+import addListener from '../dom/add-listener.js'
 
 function renderAction(container, button, dialog) {
   const {el: element, action} = button

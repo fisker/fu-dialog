@@ -1,4 +1,4 @@
-import addListener from './add-listener'
+import addListener from './add-listener.js'
 
 function preventDefault(event) {
   event.preventDefault()

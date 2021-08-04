@@ -1,4 +1,4 @@
-import assign from '../utils/assign'
+import assign from '../utils/assign.js'
 
 const defaults = {
   title: '提示',

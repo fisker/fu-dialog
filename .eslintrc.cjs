@@ -33,6 +33,13 @@ module.exports = {
         jest: true,
         browser: true,
       },
+      globals: {
+        require: 'readonly',
+        __dirname: 'readonly',
+      },
+      rules: {
+        'unicorn/prefer-node-protocol': 'off',
+      },
     },
   ],
 }

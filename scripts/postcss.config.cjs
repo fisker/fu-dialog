@@ -1,7 +1,8 @@
 const postcssConfig = require('@fisker/postcss-config')
-const buildConfig = require('./build.config')
 
-module.exports = (context) => {
+module.exports = async (context) => {
+  const {default: buildConfig} = await import('./build.config.js')
+
   const IS_MINIFY = context.env === 'MINIFY'
   const banner = buildConfig.banner[IS_MINIFY ? 'mini' : 'full']
 

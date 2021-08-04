@@ -1,4 +1,4 @@
-import isArray from '../utils/is-array'
+import isArray from '../utils/is-array.js'
 
 function parseClassNames(className = []) {
   let classList = ''

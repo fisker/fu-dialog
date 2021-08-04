@@ -1,8 +1,11 @@
-const path = require('path')
-const writePackage = require('write-pkg').sync
-const mem = require('mem')
-const package_ = require('../package.json')
-const buildConfig = require('./build.config')
+import path from 'node:path'
+import writePackage from 'write-pkg'
+import mem from 'mem'
+import createEsmUtils from 'esm-utils'
+import buildConfig from './build.config.js'
+
+const {json, __dirname} = createEsmUtils(import.meta)
+const package_ = json.loadSync('../package.json')
 
 const getEntryByFormat = mem(function getEntryByFormat(format) {
   const [version] = buildConfig.versions
@@ -29,17 +32,15 @@ const entries = {
   jsdelivr: 'umd',
 }
 
-Object.keys(entries)
-  .map((entry) => ({
-    entry,
-    format: entries[entry],
-  }))
-  .forEach(({entry, format}) => {
-    if (format) {
-      package_[entry] = getEntryByFormat(format)
-    } else {
-      delete package_[entry]
-    }
-  })
+for (const {entry, format} of Object.keys(entries).map((entry) => ({
+  entry,
+  format: entries[entry],
+}))) {
+  if (format) {
+    package_[entry] = getEntryByFormat(format)
+  } else {
+    delete package_[entry]
+  }
+}
 
-writePackage(path.join(__dirname, '../package.json'), package_)
+writePackage.sync(path.join(__dirname, '../package.json'), package_)

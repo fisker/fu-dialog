@@ -1,4 +1,4 @@
-import hasOwn from './has-own'
+import hasOwn from './has-own.js'
 
 function forIn(iteratee) {
   let key

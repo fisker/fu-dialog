@@ -1,5 +1,9 @@
-const createBanner = require('create-banner')
-const package_ = require('../package.json')
+import createEsmUtils from 'esm-utils'
+import createBanner from 'create-banner'
+
+const {json} = createEsmUtils(import.meta)
+
+const package_ = json.loadSync('../package.json')
 
 const {version} = package_
 
@@ -22,19 +26,19 @@ const source = 'src'
 
 const builds = {
   cjs: {
-    dist: `${fileName}.common`,
+    dist: fileName,
     minify: false,
-    ext: 'js',
+    ext: 'cjs',
     standalone: false,
   },
   esm: {
-    dist: `${fileName}.esm`,
+    dist: fileName,
     minify: true,
     ext: 'mjs',
     standalone: true,
   },
   umd: {
-    dist: `${fileName}`,
+    dist: fileName,
     minify: true,
     ext: 'js',
     standalone: true,
@@ -58,7 +62,7 @@ const versions = [
   },
 ]
 
-module.exports = {
+export default {
   ns,
   libName: libraryName,
   fileName,

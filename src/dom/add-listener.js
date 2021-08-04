@@ -2,8 +2,8 @@
 //   SUPPORTS_EVENT_LISTENER
 // } from './supports'
 
-import returnFalse from '../utils/return-false'
-import returnTrue from '../utils/return-true'
+import returnFalse from '../utils/return-false.js'
+import returnTrue from '../utils/return-true.js'
 
 function isListener(x) {
   return typeof x === 'function' || typeof x === 'boolean'

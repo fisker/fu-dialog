@@ -1,5 +1,5 @@
-import globalThis from './global-this'
 import {name as packageName} from '../../package.json'
+import globalThis from './global-this.js'
 
 const {document} = globalThis
 

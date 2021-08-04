@@ -1,11 +1,11 @@
-import assign from '../utils/assign'
-import noop from '../utils/noop'
-import returnFalse from '../utils/return-false'
-import returnTrue from '../utils/return-true'
-import parseClassNames from '../dom/parse-classnames'
-import createElement from '../dom/create-element'
-import * as classNames from './classnames'
-import defaults from './defaults'
+import assign from '../utils/assign.js'
+import noop from '../utils/noop.js'
+import returnFalse from '../utils/return-false.js'
+import returnTrue from '../utils/return-true.js'
+import parseClassNames from '../dom/parse-classnames.js'
+import createElement from '../dom/create-element.js'
+import * as classNames from './classnames.js'
+import defaults from './defaults.js'
 
 function createAction(actionText, properties, action = noop) {
   if (typeof properties === 'function') {

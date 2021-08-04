@@ -1,8 +1,7 @@
 import fs from 'fs'
-import path from 'path'
 import {JSDOM} from 'jsdom'
-import getType from '../src/utils/get-type'
-import buildConfig from '../scripts/build.config'
+import getType from '../src/utils/get-type.js'
+import buildConfig from '../scripts/build.config.js'
 import package_ from '../package.json'
 
 const testData = [
@@ -32,7 +31,7 @@ beforeEach(() => {
 })
 
 describe.skip('support Data Types', () => {
-  testData.forEach((value) => {
+  for (const value of testData) {
     test(`${getType(value)}`, () => {
       window[buildConfig.libName].alert(value)
       const messageBody = window.document.querySelector(
@@ -40,5 +39,5 @@ describe.skip('support Data Types', () => {
       ).textContent
       expect(messageBody).toBe(String(value))
     })
-  })
+  }
 })

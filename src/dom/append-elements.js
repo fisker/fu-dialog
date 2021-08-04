@@ -1,6 +1,6 @@
-import isArrayLike from '../utils/is-array-like'
-import forEach from '../utils/for-each'
-import isNode from '../utils/is-node'
+import isArrayLike from '../utils/is-array-like.js'
+import forEach from '../utils/for-each.js'
+import isNode from '../utils/is-node.js'
 
 function appendElement(parent, children) {
   if (typeof children === 'string') {

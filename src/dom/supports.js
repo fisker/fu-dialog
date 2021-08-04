@@ -1,4 +1,4 @@
-import document from '../utils/document'
+import document from '../utils/document.js'
 
 const div = document.createElement('div')
 

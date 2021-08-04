@@ -1,5 +1,5 @@
-import forEach from './for-each'
-import forIn from './for-in'
+import forEach from './for-each.js'
+import forIn from './for-in.js'
 
 const {assign} = Object
 

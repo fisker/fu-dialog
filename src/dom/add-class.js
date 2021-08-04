@@ -1,4 +1,4 @@
-import {SUPPORTS_CLASS_LIST} from './supports'
+import {SUPPORTS_CLASS_LIST} from './supports.js'
 
 function addClassByClassList(element, className) {
   element.classList.add(className)

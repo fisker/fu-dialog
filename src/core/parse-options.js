@@ -1,6 +1,6 @@
-import defaults from './defaults'
-import getType from '../utils/get-type'
-import assign from '../utils/assign'
+import getType from '../utils/get-type.js'
+import assign from '../utils/assign.js'
+import defaults from './defaults.js'
 
 function parseOptions(options, defaultOptions = defaults) {
   const type = getType(options)

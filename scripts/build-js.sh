@@ -1,7 +1,5 @@
-
-
 # build js
-rollup --config rollup.config.js
+rollup --config rollup.config.mjs
 
 # prettier
 prettier "dist/**/*.{mjs,js}" --write

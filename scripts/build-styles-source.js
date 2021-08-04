@@ -1,8 +1,11 @@
-const path = require('path')
-const fs = require('fs')
-const cpFile = require('cp-file')
-const buildConfig = require('./build.config')
-// const scss2less = require('less-plugin-sass2less/lib/')
+import path from 'node:path'
+import fs from 'node:fs'
+import cpFile from 'cp-file'
+import createEsmUtils from 'esm-utils'
+import buildConfig from './build.config.js'
+// const scss2less from 'less-plugin-sass2less/lib/')
+
+const {require, __dirname} = createEsmUtils(import.meta)
 
 const distFolder = path.join(__dirname, '..', buildConfig.dist, 'styles')
 const sourceFolder = path.join(__dirname, '..', buildConfig.src, 'styles')
