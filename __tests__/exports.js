@@ -1,7 +1,7 @@
 import fs from 'fs'
 import {JSDOM} from 'jsdom'
 import buildConfig from '../scripts/build.config.cjs'
-import package_ from '../package.json.js'
+import package_ from '../package.json'
 
 const librarySource = fs.readFileSync(
   require.resolve(`../${package_.browser}`),
