@@ -1,7 +1,7 @@
 import fs from 'fs'
 import {JSDOM} from 'jsdom'
 import getType from '../src/utils/get-type.js'
-import buildConfig from '../scripts/build.config.js'
+import buildConfig from '../scripts/build.config.cjs'
 import package_ from '../package.json'
 
 const testData = [

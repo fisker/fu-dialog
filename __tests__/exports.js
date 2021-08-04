@@ -1,6 +1,6 @@
 import fs from 'fs'
 import {JSDOM} from 'jsdom'
-import buildConfig from '../scripts/build.config.js'
+import buildConfig from '../scripts/build.config.cjs'
 import package_ from '../package.json.js'
 
 const librarySource = fs.readFileSync(

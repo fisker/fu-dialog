@@ -1,9 +1,6 @@
-import createEsmUtils from 'esm-utils'
-import createBanner from 'create-banner'
+const createBanner = require('create-banner')
 
-const {json} = createEsmUtils(import.meta)
-
-const package_ = json.loadSync('../package.json')
+const package_ = require('../package.json')
 
 const {version} = package_
 
@@ -62,7 +59,7 @@ const versions = [
   },
 ]
 
-export default {
+module.exports = {
   ns,
   libName: libraryName,
   fileName,

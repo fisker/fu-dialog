@@ -2,7 +2,7 @@ import path from 'node:path'
 import writePackage from 'write-pkg'
 import mem from 'mem'
 import createEsmUtils from 'esm-utils'
-import buildConfig from './build.config.js'
+import buildConfig from './build.config.cjs'
 
 const {json, __dirname} = createEsmUtils(import.meta)
 const package_ = json.loadSync('../package.json')

@@ -4,7 +4,7 @@ import json from '@rollup/plugin-json'
 import babel from 'rollup-plugin-babel'
 import {terser} from 'rollup-plugin-terser'
 // import prettier from 'rollup-plugin-prettier'
-import buildConfig from './scripts/build.config.js'
+import buildConfig from './scripts/build.config.cjs'
 
 const builds = Object.keys(buildConfig.builds).map((format) => ({
   format,

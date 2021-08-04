@@ -2,7 +2,7 @@ import path from 'node:path'
 import fs from 'node:fs'
 import cpFile from 'cp-file'
 import createEsmUtils from 'esm-utils'
-import buildConfig from './build.config.js'
+import buildConfig from './build.config.cjs'
 // const scss2less from 'less-plugin-sass2less/lib/')
 
 const {require, __dirname} = createEsmUtils(import.meta)
