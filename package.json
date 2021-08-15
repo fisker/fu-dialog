@@ -130,7 +130,7 @@
     "stylelint": "13.13.1",
     "table": "6.7.1",
     "uglify-js": "3.14.1",
-    "write-pkg": "4.0.0"
+    "write-pkg": "5.0.0"
   },
   "publishConfig": {
     "access": "public",
