@@ -66,7 +66,7 @@ function buildVersion(version, minify) {
           version,
           build,
           minify,
-        })
+        }),
       ),
     plugins: rolllupPlugins({
       minify,
@@ -75,13 +75,13 @@ function buildVersion(version, minify) {
 }
 
 const versions = buildConfig.versions.map((version) =>
-  buildVersion(version, false)
+  buildVersion(version, false),
 )
 
 const minVersions = buildConfig.versions.map((version) =>
-  buildVersion(version, true)
+  buildVersion(version, true),
 )
 
 export default [...versions, ...minVersions].filter(
-  (config) => config.output.length
+  (config) => config.output.length,
 )

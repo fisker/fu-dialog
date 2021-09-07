@@ -102,7 +102,7 @@ class Dialog {
       const actionsContainer = createElement(foot, 'div', classNames.ACTIONS)
 
       forEach.call(actions, (action) =>
-        renderAction(actionsContainer, action, this)
+        renderAction(actionsContainer, action, this),
       )
     }
 

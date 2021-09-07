@@ -5,7 +5,7 @@ import package_ from '../package.json'
 
 const librarySource = fs.readFileSync(
   require.resolve(`../${package_.browser}`),
-  'UTF-8'
+  'UTF-8',
 )
 const {window} = new JSDOM('', {runScripts: 'outside-only'})
 window.eval(librarySource)

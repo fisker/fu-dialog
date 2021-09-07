@@ -18,7 +18,7 @@ function createTestButton(text, properties = {}, onClick = noop) {
     {
       textContent: text,
     },
-    properties
+    properties,
   )
 
   const element = createElement('button', properties)

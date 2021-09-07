@@ -25,7 +25,7 @@ function createAction(actionText, properties, action = noop) {
     {
       textContent: String(actionText),
     },
-    properties
+    properties,
   )
 
   const classList = parseClassNames(properties.className)
@@ -64,7 +64,7 @@ function createTypedAction(type) {
       {
         className: typedActionClassName,
       },
-      action
+      action,
     )
   }
 }

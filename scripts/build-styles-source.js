@@ -1,5 +1,5 @@
 import path from 'node:path'
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 import cpFile from 'cp-file'
 import createEsmUtils from 'esm-utils'
 import buildConfig from './build.config.cjs'
@@ -10,9 +10,9 @@ const {require, __dirname} = createEsmUtils(import.meta)
 const distFolder = path.join(__dirname, '..', buildConfig.dist, 'styles')
 const sourceFolder = path.join(__dirname, '..', buildConfig.src, 'styles')
 
-cpFile.sync(
+await cpFile(
   require.resolve('dialog-polyfill/dialog-polyfill.css'),
-  path.join(distFolder, 'scss/_dialog-polyfill.scss')
+  path.join(distFolder, 'scss/_dialog-polyfill.scss'),
 )
 
 // cpFile.sync(
@@ -20,18 +20,18 @@ cpFile.sync(
 //   path.join(distFolder, 'less/_dialog-polyfill.less')
 // )
 
-copyScss(
+await copyScss(
   path.join(sourceFolder, '_dialog.scss'),
-  path.join(distFolder, 'scss/_dialog.scss')
+  path.join(distFolder, 'scss/_dialog.scss'),
 )
 
-function copyScss(source, dist) {
-  const content = fs.readFileSync(source, 'UTF-8')
-  fs.writeFileSync(dist, `${buildConfig.banner.full}\n${content}`, 'UTF-8')
+async function copyScss(source, dist) {
+  const content = await fs.readFile(source, 'utf8')
+  await fs.writeFile(dist, `${buildConfig.banner.full}\n${content}`)
 }
 
 // function convertScss2Less(scssFile, lessFile) {
-//   const scssSource = fs.readFileSync(scssFile, 'UTF-8')
+//   const scssSource = fs.readFileSync(scssFile, 'utf8')
 //   const converter = new scss2less()
 //   let lessSource = converter.process(scssSource, {
 //     fileInfo: {filename: path.basename(scssFile)},
@@ -46,7 +46,7 @@ function copyScss(source, dist) {
 //   fs.writeFileSync(
 //     lessFile,
 //     buildConfig.banner.full + '\n' + lessSource,
-//     'UTF-8'
+//     'utf8'
 //   )
 // }
 

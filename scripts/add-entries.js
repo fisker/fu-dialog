@@ -1,11 +1,11 @@
 import path from 'node:path'
-import writePackage from 'write-pkg'
+import {writePackage} from 'write-pkg'
 import mem from 'mem'
 import createEsmUtils from 'esm-utils'
 import buildConfig from './build.config.cjs'
 
 const {json, __dirname} = createEsmUtils(import.meta)
-const package_ = json.loadSync('../package.json')
+const package_ = await json.load('../package.json')
 
 const getEntryByFormat = mem(function getEntryByFormat(format) {
   const [version] = buildConfig.versions
@@ -43,4 +43,4 @@ for (const {entry, format} of Object.keys(entries).map((entry) => ({
   }
 }
 
-writePackage.sync(path.join(__dirname, '../package.json'), package_)
+await writePackage(path.join(__dirname, '../package.json'), package_)
