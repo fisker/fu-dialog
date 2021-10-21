@@ -104,7 +104,7 @@
     "eslint": "8.0.1",
     "esm-utils": "2.0.0",
     "gzip-size": "6.0.0",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "jest": "27.3.1",
     "jsdom": "18.0.0",
     "lint-staged": "11.2.3",
