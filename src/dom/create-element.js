@@ -20,7 +20,6 @@ function parseDomProperties(properties = {}) {
   }
 
   if (!SUPPORTS_TEXT_CONTENT && 'textContent' in properties) {
-    // eslint-disable-next-line unicorn/prefer-dom-node-text-content
     properties.innerText = properties.textContent
     delete properties.textContent
   }

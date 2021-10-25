@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
-import babel from 'rollup-plugin-babel'
+import {babel} from '@rollup/plugin-babel'
 import {terser} from 'rollup-plugin-terser'
 // import prettier from 'rollup-plugin-prettier'
 import buildConfig from './scripts/build.config.cjs'
@@ -11,7 +11,7 @@ const builds = Object.keys(buildConfig.builds).map((format) => ({
   ...buildConfig.builds[format],
 }))
 
-function rolllupPlugins({minify}) {
+function rollupPlugins({minify}) {
   return [
     commonjs({
       include: [
@@ -21,7 +21,7 @@ function rolllupPlugins({minify}) {
     }),
     json(),
     nodeResolve(),
-    babel(),
+    babel({babelHelpers: 'bundled'}),
     minify ? terser() : null,
   ]
 }
@@ -68,7 +68,7 @@ function buildVersion(version, minify) {
           minify,
         }),
       ),
-    plugins: rolllupPlugins({
+    plugins: rollupPlugins({
       minify,
     }),
   }

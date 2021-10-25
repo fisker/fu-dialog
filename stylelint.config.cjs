@@ -9,4 +9,5 @@
 
 module.exports = {
   extends: ['@fisker/stylelint-config'],
+  rules: {},
 }
