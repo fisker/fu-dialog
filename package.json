@@ -83,7 +83,7 @@
     "@fisker/lint-staged-config": "3.1.4",
     "@fisker/postcss-config": "1.2.3",
     "@fisker/prettier-config": "5.0.3",
-    "@fisker/stylelint-config": "5.0.9",
+    "@fisker/stylelint-config": "5.0.10",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
