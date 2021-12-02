@@ -103,7 +103,7 @@
     "gzip-size": "7.0.0",
     "husky": "7.0.4",
     "jest": "27.4.3",
-    "jsdom": "18.1.1",
+    "jsdom": "19.0.0",
     "lint-staged": "12.1.2",
     "markdownlint-cli": "0.30.0",
     "mem": "9.0.1",
