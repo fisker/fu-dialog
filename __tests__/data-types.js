@@ -20,7 +20,7 @@ const testData = [
 
 const librarySource = fs.readFileSync(
   require.resolve(`../${package_.browser}`),
-  'UTF-8',
+  'utf8',
 )
 
 beforeEach(() => {
@@ -32,7 +32,7 @@ beforeEach(() => {
 
 describe.skip('support Data Types', () => {
   for (const value of testData) {
-    test(`${getType(value)}`, () => {
+    test(getType(value), () => {
       window[buildConfig.libName].alert(value)
       const messageBody = window.document.querySelector(
         `.${buildConfig.ns}__message-body`,
