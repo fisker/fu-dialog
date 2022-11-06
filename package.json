@@ -111,7 +111,7 @@
     "parcel-bundler": "1.12.5",
     "postcss": "8.4.18",
     "postcss-cli": "10.0.0",
-    "postcss-header": "3.0.2",
+    "postcss-header": "3.0.3",
     "postcss-pseudo-element-colons": "1.0.2",
     "prettier": "2.7.1",
     "prettier-config-fisker": "1.0.3",
