@@ -82,7 +82,7 @@
     "@fisker/husky-config": "4.1.2",
     "@fisker/lint-staged-config": "3.1.5",
     "@fisker/postcss-config": "1.2.9",
-    "@fisker/prettier-config": "5.0.6",
+    "@fisker/prettier-config": "5.0.7",
     "@fisker/stylelint-config": "5.0.17",
     "@rollup/plugin-babel": "6.0.2",
     "@rollup/plugin-commonjs": "23.0.2",
