@@ -121,7 +121,7 @@
     "rollup-plugin-prettier": "3.0.0",
     "rollup-plugin-terser": "7.0.2",
     "sass": "1.56.1",
-    "sort-package-json": "2.1.0",
+    "sort-package-json": "2.4.1",
     "stylelint": "14.15.0",
     "table": "6.8.1",
     "uglify-js": "3.17.4",
