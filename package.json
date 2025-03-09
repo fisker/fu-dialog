@@ -124,7 +124,7 @@
     "sort-package-json": "2.1.0",
     "stylelint": "16.0.2",
     "table": "6.8.1",
-    "uglify-js": "3.17.4",
+    "uglify-js": "3.19.3",
     "write-pkg": "5.1.0"
   },
   "publishConfig": {
