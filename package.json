@@ -99,7 +99,7 @@
     "dialog-polyfill": "0.5.6",
     "es6-promise": "4.2.8",
     "eslint": "8.27.0",
-    "esm-utils": "4.1.0",
+    "esm-utils": "4.1.2",
     "gzip-size": "7.0.0",
     "husky": "8.0.2",
     "jest": "29.3.1",
